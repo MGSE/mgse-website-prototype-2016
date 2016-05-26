@@ -11,7 +11,21 @@
 }
 .courses .filter legend,
 .courses .filter label {
-    margin-right: 20px;
+    margin-right: 10px;
+    padding: 5px 8px;
+    border-radius: 3px;
+    &.doctors {
+        background: #B5E8B0;
+    }
+    &.masters {
+        background: #d2f1cf;
+    }
+    &.gradcert {
+        background: #C2E4FF;
+    }
+    &.profcert {
+        background: #e3f3ff;
+    }
 }
 .theme {
     margin-top: 4em;
