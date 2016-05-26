@@ -15,14 +15,31 @@ heroImage:  http://education.unimelb.edu.au/__data/assets/image/0007/1244833/que
             <div id="main-content" class="main" role='main'>
                 <h1 class="title">{{ page.title }}</h1>
 
-{%include  style-guide-nav.html %}
+                <nav class="style-guide-nav">
+    <ul>
+        <li><a href="http://education.unimelb.edu.au/style-guide">Home</a></li>
+        <li><a href="http://education.unimelb.edu.au/style-guide/layout">Layout</a></li>
+        <li><a href="http://education.unimelb.edu.au/style-guide/navigation">Navigation</a></li>
+        <li><a href="http://education.unimelb.edu.au/style-guide/typography">Typography</a></li>
+        <li><a href="http://education.unimelb.edu.au/style-guide/components" class="current">Components</a></li>
+    </ul>
+</nav>
+<p><a href="#buttons">Buttons</a> |
+<a href="#tables">Tables</a> |
+<a href="#images">Images</a> |
+<a href="#video">Video</a> |
+<a href="#wells">Wells</a> |
+<a href="#tabs">Tabs</a> |
+<a href="#accordions">Acoordions</a> |
+<a href="#readmore">Read more</a> |
+<a href="#staffprofile">Staff profile</a></p>
 
-<h2 class="style-guide">Buttons</h2>
+<h2 id="buttons" class="style-guide">Buttons</h2>
 
 <a class="button">Basic button</a>
 <a class="button--go">Call to action button</a>
 
-<h2 class="style-guide">Tables</h2>
+<h2 id="tables" class="style-guide">Tables</h2>
 
 <div class="article">
                 
@@ -153,21 +170,76 @@ heroImage:  http://education.unimelb.edu.au/__data/assets/image/0007/1244833/que
 <h2 class="style-guide">Media</h2>
 
 <h3 class="style-guide">Figures</h3>
-
+                
+<h4 id="images" class="style-guide">Image ratios</h4>
+<p>All content images on the website should be one of the following ratios:</p>
+<div class="col-3max">
+    <div>
+        <h5 class="style-guide">1:1 (square)</h5>
+        <figure>
+         <img src="http://placehold.it/387x387" alt="Dog">
+        </figure>
+    </div>
+    <div>
+        <h5 class="style-guide">2:1 landscape</h5>
+        <figure>
+            <img src="http://placehold.it/387x193" alt="Dog">
+        </figure>
+    </div>
+    <div>
+        <h5 class="style-guide">3:2 landscape, 2:3 portrait</h5>
+        <figure>    
+            <img src="http://placehold.it/387x258" alt="Dog">
+        </figure>
+        <figure>
+            <img src="http://placehold.it/387x580" alt="Dog">
+        </figure>
+    </div>
+</div>
+                
+<h4 class="style-guide">Figure placement</h4>
+<p>All images should be placed within a &lt;figure&gt; tag.</p>
+                
 <div class="article">
-  <figure>
-    <img src="http://placehold.it/270x270" alt="Dog">
+  <figure class="full-width">
+    <a href="#"><img src="http://placehold.it/745x373" alt="Dog"></a>
     <figcaption>This is a caption</figcaption>
   </figure>
-  <p>The default figure is 270px wide at largest viewport setiing, it will scale down with window size.</p>
+</div>                  
+<div class="side-bar">
+  <p>The default figure will fill the content area.</p>
+  <p>In this case this figure is inside the content area of a Style A layout.</p>
+  <p>The maximum width of this image is 745px.</p>
+    <p>Make sure the native resolution of the image is at least 745px wide.</p>
+    <p>If the figure is smaller than 745px wide add style="max-width: Xpx;" to the figure tag, where X is the number of px wide.</p>
+</div>
+<h5 class="style-guide">How to use</h5>
+<div>
+    <pre>
+        <h4>Code</h4>
+        <code>
+&lt;figure class=&quot;full-width&quot;&gt;
+    &lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;http://placehold.it/745x373&quot; alt=&quot;Dog&quot;&gt;&lt;/a&gt;
+    &lt;figcaption&gt;This is a caption&lt;/figcaption&gt;
+&lt;/figure&gt;
+        </code>
+    </pre>
+</div>
+
+<div class="article">
+  <figure class="left">
+    <img src="http://placehold.it/270x270" alt="Dog">
+    <figcaption>This is a caption (optional)</figcaption>
+  </figure>
+  <p>You can use the class="left" on the figure to float the figure left. The default figure.left size is 270px wide at largest viewport setting, it will scale down with window size.</p>
   <p>It floats to the left of the following text.</p>
   <p>To clear the float use a new div or hr with class="row-break".</p>
-  <p>You should size the image within the figure to its maximum size, in thie case of the default figure: 270px wide.</p>
+  <p>Make sure the native resolution of the image is at least 270px wide.</p>
     <hr class="row-break"/>
   
     <figure class="right">
         <img src="http://placehold.it/270x270" alt="Dog">
-        <figcaption>This is a caption</figcaption>
+        <figcaption>This is a caption (optional)</figcaption>
     </figure>
     <p>You can use the class="right" on the figure to float the figure right.</p>
     <p>Both of these figures will be full width on mobiles.</p>
@@ -176,30 +248,20 @@ heroImage:  http://education.unimelb.edu.au/__data/assets/image/0007/1244833/que
   <div class="well">
     <figure>
       <img src="http://placehold.it/430x215" alt="Dog">
-      <figcaption>This is a caption</figcaption>
+      <figcaption>This is a caption (optional)</figcaption>
     </figure>
     <p>When you have a figure in a sidebar it will be full-width</p>
     <figure style="width: 45%;">
       <img src="http://placehold.it/430x215" alt="Dog">
-      <figcaption>This is a caption</figcaption>
+      <figcaption>This is a caption (optional)</figcaption>
     </figure>
-    <p>You can use an inline style to reduce the size of the figure eg. style="width: 45%;"</p>
+    <p>You can use an inline style to reduce the size of the figure eg. style="width: 45%;" or style="max-width: 200px;"</p>
   </div>
 </div>
 
-<div class="article">
-  <figure class="full-width">
-    <a href="#"><img src="http://placehold.it/745x373" alt="Dog"></a>
-    <figcaption>This is a caption</figcaption>
-  </figure>
-</div>
-<div class="side-bar">
-  <p>This figure has class="full-width" so it will fill the content area.</p>
-  <p>In this case this figure is inside the content area of a Style A layout.</p>
-  <p>The maximum width of this image is 745px.</p>
-</div>
 
-<h3 class="style-guide">Video</h3>
+
+<h3 id="video" class="style-guide">Video</h3>
 <div class="article">
   <figure class="video">
     <div class="videoWrapper">
@@ -216,9 +278,22 @@ heroImage:  http://education.unimelb.edu.au/__data/assets/image/0007/1244833/que
     <figcaption>This is a caption</figcaption>
   </figure>
 </div>
-
+<h4 class="style-guide">How to use</h4>
 <div>
-  <h2 class="style-guide">Well</h2>
+    <pre>
+        <h4>Code</h4>
+        <code>
+&lt;figure class=&quot;video&quot;&gt;
+    &lt;div class=&quot;videoWrapper&quot;&gt;
+        &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/uGOFPfGX3SU&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+    &lt;figcaption&gt;This is a caption&lt;/figcaption&gt;
+&lt;/figure&gt;
+        </code>
+    </pre>
+</div>
+<div>
+  <h2 id="wells" class="style-guide">Well</h2>
   <div class="article">
     <p>Wells are usually used in the sidebar to highlight useful or summary content.</p>
   </div>
@@ -235,7 +310,7 @@ heroImage:  http://education.unimelb.edu.au/__data/assets/image/0007/1244833/que
   </div>
 </div>
                 
-<h2 class="style-guide">Tabs</h2>
+<h2 id="tabs" class="style-guide">Tabs</h2>
 
 <h3 class="style-guide">Page level tabs</h3>
 <p>Page level tabs are used for project pages that have a lot of information that can be sectioned. These tabs should be placed at the top of the page under the heading 1 and act as a pseudo sub-navagation for the page. Clicking each tab should change all content on page below the tab.</p>
@@ -272,87 +347,170 @@ heroImage:  http://education.unimelb.edu.au/__data/assets/image/0007/1244833/que
         <p class="intro">Our puplications are blah blah blah &hellip;</p>
     </div>
 </div>
-                
+<h4 class="style-guide">How to use</h4>
+<p>Put the following code at top of page, the href values must be in page links to unique id's of tab panes. Add class="current" to the tab you want open on page load.</p>
+<div>
+    <pre>
+        <h4>Code</h4>
+        <code>
+&lt;ul class=&quot;tabs page&quot; role=&quot;tablist&quot;&gt;
+    &lt;li role=&quot;presentation&quot;&gt;
+        &lt;a href=&quot;#section1&quot; role=&quot;tab&quot; class=&quot;current&quot;&gt;About the project&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li role=&quot;presentation&quot;&gt;
+        &lt;a href=&quot;#section2&quot;  role=&quot;tab&quot;&gt;Project team&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li role=&quot;presentation&quot;&gt;
+        &lt;a href=&quot;#section3&quot; role=&quot;tab&quot;&gt;Work in progress&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li role=&quot;presentation&quot;&gt;
+        &lt;a href=&quot;#section4&quot; role=&quot;tab&quot;&gt;Related publications&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+        </code>
+    </pre>
+</div>
+<p>The following is the code for the page contents. It is recommended to create a separate page in squiz for each tab content (link type 2) and use nested content to add it to the display page. Add class="current" to the tab you want open on page load.</p>
+<div>
+    <pre>
+        <h4>Code</h4>
+        <code>
+&lt;div class=&quot;panes&quot;&gt;
+    &lt;div id=&quot;section1&quot; role=&quot;tabpanel&quot; class=&quot;current&quot;&gt;
+        &lt;!-- tab content goes here --&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;section2&quot; role=&quot;tabpanel&quot;&gt;
+        &lt;!-- tab content goes here --&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;section3&quot; role=&quot;tabpanel&quot;&gt;
+        &lt;!-- tab content goes here --&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;section4&quot; role=&quot;tabpanel&quot;&gt;
+        &lt;!-- tab content goes here --&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+        </code>
+    </pre>
+</div>
 <div class="article">
 
-<h3 class="style-guide">Tabs within content</h3>
-<p>Tabs within the content can be used anywhere within the content.</p>
-
-<h4 class="style-guide">In-content tabs with unenclosed panes.</h4>
-<p>You might use in-content tabs when you have two versions of the same content for different audiences that you want to switch out.</p>
-
-<ul class="tabs" role="tablist">
-    <li role="presentation">
-        <a href="#start-year" role="tab" class="current" >Start year intake</a>
-    </li>
-    <li role="presentation">
-        <a href="#mid-year"  role="tab">Mid-year intake</a>
-    </li>
-</ul>
-<div class="panes">
-    <div id="start-year" role="tabpanel" class="current">
-        <h2>Start year intake</h2>
-        <p >The core program comprises four semesters over two years. You can choose to exit after the third semester with a Graduate Diploma in Teaching, which will qualify you to teach in early childhood settings (children aged 0-5 years) only.</p>
-    </div>
-    <div id="mid-year" role="tabpanel">
-        <h2>Mid-year intake</h2>
-        <p>This program is undertaken in four semesters over two years. The first semester provides an in-depth opportunity to learn more about working with children in an Australian context, which will ensure you are better prepared to face the challenges of the program, most particularly during placements in early childhood settings. In turn this can help you achieve better results in the course and improve your employability in the future.</p>
-    </div>
-</div>
-<p>You can have content that applies in both situations above or below these tabs.</p>
-
-                
-<h4 class="style-guide">In-content tabs with enclosed panes.</h4>
-<p>Tabs with enclosed panes are good when using tabs to display short summative information.</p>
-                   
-<ul class="tabs" role="tablist">
-    <li role="presentation">
-        <a href="#sect1" role="tab" class="current" >Careers</a>
-    </li>
-    <li role="presentation">
-        <a href="#sect2" role="tab">Fees</a>
-    </li>
-    <li role="presentation">
-        <a href="#sect3" role="tab">Pre-requisites</a>
-    </li>
-    <li role="presentation">
-        <a href="#sect4" role="tab">Duration</a>
-    </li>
-</ul>
-<div class="panes enclosed">
-    <div id="sect1" role="tabpanel" class="current">
-        <h2>Careers</h2>
-        <p>Graduates of this program can enter into roles such as:</p>
-        <ul>
-            <li>Garbologist</li>
-            <li>Household engineer</li>
-            <li>Daddy day care</li>
-        </ul>
-    </div>
-    <div id="sect2" role="tabpanel">
-        <h2>Fees</h2>
-        <p>Pretty expensive!</p>
-    </div>
-
-    <div id="sect3" role="tabpanel">
-        <h2>Pre-requisites</h2>
-        <p>PhD in life studies</p>
-    </div>
-    <div id="sect4" role="tabpanel">
-        <h2>Duration</h2>
-        <p>How much time do you have?</p>
-    </div>
-</div>
+    <h3 class="style-guide">Tabs within content</h3>
+    <p>Tabs within the content can be used anywhere within the content.</p>
     
-
+    <h4 class="style-guide">In-content tabs with unenclosed panes.</h4>
+    <p>You might use in-content tabs when you have two versions of the same content for different audiences that you want to switch out. You can have content that applies in both situations above or below these tabs.</p>
+    
+    <ul class="tabs" role="tablist">
+        <li role="presentation">
+            <a href="#start-year" role="tab" class="current" >Start year intake</a>
+        </li>
+        <li role="presentation">
+            <a href="#mid-year"  role="tab">Mid-year intake</a>
+        </li>
+    </ul>
+    <div class="panes">
+        <div id="start-year" role="tabpanel" class="current">
+            <h2>Start year intake</h2>
+            <p >The core program comprises four semesters over two years. You can choose to exit after the third semester with a Graduate Diploma in Teaching, which will qualify you to teach in early childhood settings (children aged 0-5 years) only.</p>
+        </div>
+        <div id="mid-year" role="tabpanel">
+            <h2>Mid-year intake</h2>
+            <p>This program is undertaken in four semesters over two years. The first semester provides an in-depth opportunity to learn more about working with children in an Australian context, which will ensure you are better prepared to face the challenges of the program, most particularly during placements in early childhood settings. In turn this can help you achieve better results in the course and improve your employability in the future.</p>
+        </div>
+    </div>
 </div>
 <div class="side-bar">
     
 </div>
+<h4 class="style-guide">How to use</h4>
+<p>Add class="current" to the tab and pane you want open on page load.</p>
+<div>
+    <pre>
+        <h4>Code</h4>
+        <code>
+&lt;ul class=&quot;tabs&quot; role=&quot;tablist&quot;&gt;
+    &lt;li role=&quot;presentation&quot;&gt;
+        &lt;a href=&quot;#start-year&quot; role=&quot;tab&quot; class=&quot;current&quot; &gt;Start year intake&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li role=&quot;presentation&quot;&gt;
+        &lt;a href=&quot;#mid-year&quot;  role=&quot;tab&quot;&gt;Mid-year intake&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;panes&quot;&gt;
+    &lt;div id=&quot;start-year&quot; role=&quot;tabpanel&quot; class=&quot;current&quot;&gt;
+        &lt;!-- tab content goes here --&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;mid-year&quot; role=&quot;tabpanel&quot;&gt;
+        &lt;!-- tab content goes here --&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+        </code>
+    </pre>
+</div>
 
-<h2 class="style-guide">Accordions</h2>
+<div class="article">
+    <h4 class="style-guide">In-content tabs with enclosed panes.</h4>
+    <p>Tabs with enclosed panes are good when using tabs to display short summative information.</p>
+                       
+    <ul class="tabs" role="tablist">
+        <li role="presentation">
+            <a href="#sect1" role="tab" class="current" >Careers</a>
+        </li>
+        <li role="presentation">
+            <a href="#sect2" role="tab">Fees</a>
+        </li>
+        <li role="presentation">
+            <a href="#sect3" role="tab">Pre-requisites</a>
+        </li>
+        <li role="presentation">
+            <a href="#sect4" role="tab">Duration</a>
+        </li>
+    </ul>
+    <div class="panes enclosed">
+        <div id="sect1" role="tabpanel" class="current">
+            <h2>Careers</h2>
+            <p>Graduates of this program can enter into roles such as:</p>
+            <ul>
+                <li>Garbologist</li>
+                <li>Household engineer</li>
+                <li>Daddy day care</li>
+            </ul>
+        </div>
+        <div id="sect2" role="tabpanel">
+            <h2>Fees</h2>
+            <p>Pretty expensive!</p>
+        </div>
+    
+        <div id="sect3" role="tabpanel">
+            <h2>Pre-requisites</h2>
+            <p>PhD in life studies</p>
+        </div>
+        <div id="sect4" role="tabpanel">
+            <h2>Duration</h2>
+            <p>How much time do you have?</p>
+        </div>
+    </div>
+</div>
+<div class="side-bar">
+    
+</div>
+<h4 class="style-guide">How to use</h4>
+<p>Same as above but add 'enclosed' class to 'panes' div e.g.</p>
+<div>
+    <pre>
+        <h4>Code</h4>
+        <code>
+&lt;div class=&quot;panes enclosed&quot;&gt;
+        </code>
+    </pre>
+</div>
 
-<h2 id="mteach" class="accordion-label"><a href="#">Master of Teaching (Secondary, Primary, Early Childhood)</a></h2>
+</div>
+
+
+<h2 id="accordions" class="style-guide">Accordions</h2>
+
+<h2 class="accordion-label"><a href="#">Master of Teaching (Secondary, Primary, Early Childhood)</a></h2>
 <div class="accordion-content">
     <h3>Domestic students</h3>
     <p>We are now accepting direct applications for the Master of Teaching*. Direct applications will only be considered after VTAC applications are assessed, subject to availability.</p>
@@ -375,7 +533,7 @@ heroImage:  http://education.unimelb.edu.au/__data/assets/image/0007/1244833/que
     </ul>
 </div>
 
-<h2 id="mteachsecinternship" class="accordion-label"><a href="#">Master of Teaching (Secondary) Internship</a></h2>
+<h2 class="accordion-label"><a href="#">Master of Teaching (Secondary) Internship</a></h2>
 <div class="accordion-content">
     <h3>Domestic students</h3>
     <p>We are now accepting direct applications for the Master of Teaching*. Direct applications will only be considered after VTAC applications are assessed, subject to availability.</p>
@@ -398,7 +556,7 @@ heroImage:  http://education.unimelb.edu.au/__data/assets/image/0007/1244833/que
     </ul>
 </div>
 
-<h2 id="mteach" class="accordion-label"><a href="#">Other coursework programs</a></h2>
+<h2 class="accordion-label"><a href="#">Other coursework programs</a></h2>
 <div class="accordion-content">
     <h3>Domestic students</h3>
     <p>We are now accepting direct applications for the Master of Teaching*. Direct applications will only be considered after VTAC applications are assessed, subject to availability.</p>
@@ -421,7 +579,7 @@ heroImage:  http://education.unimelb.edu.au/__data/assets/image/0007/1244833/que
     </ul>
 </div>
 
-<h3 id="mteachsecinternship" class="accordion-label"><a href="#">Master of Teaching (Secondary) Internship</a></h3>
+<h3 class="accordion-label"><a href="#">Master of Teaching (Secondary) Internship</a></h3>
 <div class="accordion-content">
     <p>Applications are now closed.</p>
     <h4>Application outcome</h4>
@@ -431,7 +589,7 @@ heroImage:  http://education.unimelb.edu.au/__data/assets/image/0007/1244833/que
     <p>Final admission to the course will be dependent on VIT granting the intern Permission To Teach status and the employing school's acceptance of the intern under an employment contract.</p>
 </div>
 
-<h4 id="coursework" class="accordion-label"><a href="#">Other coursework programs</a></h4>
+<h4 class="accordion-label"><a href="#">Other coursework programs</a></h4>
 <div class="accordion-content">
     <h5>Domestic students</h5>
     <h6>Application dates</h6>
@@ -453,8 +611,19 @@ heroImage:  http://education.unimelb.edu.au/__data/assets/image/0007/1244833/que
         </li>
     </ul>
 </div>
-
-<h2 class="style-guide">Read more</h2>
+<h3 class="style-guide">How to use</h3>
+<div>
+    <pre>
+        <h4>Code</h4>
+        <code>
+&lt;h2 class=&quot;accordion-label&quot;&gt;&lt;a href=&quot;#&quot;&gt;Use whatever heading level applies&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;accordion-content&quot;&gt;
+    &lt;!-- content goes in here --&gt;
+&lt;/div&gt;
+        </code>
+    </pre>
+</div>
+<h2 id="readmore" class="style-guide">Read more</h2>
 
 <div class="article">
     <div class="collapse">
@@ -471,8 +640,21 @@ heroImage:  http://education.unimelb.edu.au/__data/assets/image/0007/1244833/que
     </div>
 </div>
 <div class="side-bar"></div>
-                
-<h2 class="style-guide">Staff profile</h2>
+<h3 class="style-guide">How to use</h3>
+<div>
+    <pre>
+        <h4>Code</h4>
+        <code>
+&lt;div class=&quot;collapse&quot;&gt;
+    &lt;p&gt;Any number of paragraphs etc in here&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;more-details&quot;&gt;
+    &lt;p&gt;Here is the hidden content&lt;/p&gt;
+&lt;/div&gt;
+        </code>
+    </pre>
+</div>
+<h2 id="staffprofile" class="style-guide">Staff profile</h2>
 
 <div class="col-1of2">
     <div class="profile">
@@ -488,7 +670,7 @@ heroImage:  http://education.unimelb.edu.au/__data/assets/image/0007/1244833/que
     
     <div class="profile">
         <figure>
-            <img src="/img/Sally_Beadle.jpg" alt="">
+            <img src="http://placehold.it/150x150" alt="">
         </figure>
         <div class="details">
             <h4><a href="//www.findanexpert.unimelb.edu.au/display/person194117">Sally Beadle</a></h4>
@@ -503,58 +685,37 @@ heroImage:  http://education.unimelb.edu.au/__data/assets/image/0007/1244833/que
     </div>
 </div>
 <div class="col-2of2"></div>
+<h4 class="style-guide">How to use</h4>
+<div>
+    <pre>
+        <h4>Code</h4>
+        <code>
+&lt;div class=&quot;profile&quot;&gt;
+    &lt;figure&gt;
+        &lt;img src=&quot;http://placehold.it/150x150&quot; alt=&quot;&quot;&gt;
+    &lt;/figure&gt;
+    &lt;div class=&quot;details&quot;&gt;
+        &lt;h4&gt;&lt;a href=&quot;//www.findanexpert.unimelb.edu.au/display/person194117&quot;&gt;Sally Beadle&lt;/a&gt;&lt;/h4&gt;
+        &lt;p class=&quot;info&quot;&gt;&lt;span class=&quot;tel&quot;&gt;9035 7810&lt;/span&gt; &lt;a class=&quot;email&quot; href=&quot;mailto:beadles@unimelb.edu.au&quot;&gt;Sally Beadle&lt;/a&gt; &lt;a class=&quot;twitter&quot; href=&quot;https://twitter.com/&quot;&gt;@Beadle&lt;/a&gt;&lt;/p&gt;
+        &lt;p&gt;Sally rejoined the Centre in February 2013 to work on a range of research and consultancy projects in the area of adolescent health and wellbeing.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
 
-<h2 class="style-guide">Scholarship summary</h2>
-                
-<div class="article">
-    
-    <div class="scholarship-summary">
-        <div class="details">
-            <p><b>Closing date:</b><br> 01 Feb 2016</p>
-        </div>
-        <div class="description">
-            <p><strong><a href="http://education.unimelb.edu.au/study_with_us/professional_development/course_list/phd_education/opportunities/john-and-eric-smyth-travelling-scholarship">John and Eric Smyth Travelling Scholarship</a></strong></p>
-            <p>The lucrative and prestigious John and Eric Smyth Travelling Scholarship is aimed at supporting applicants who show potential as a researcher or teacher. It offers a stipend as well as contribution to travel, accommodation and tuition fees (if applicable) for a maximum of two years.</p>
-        </div>
-    </div>
-    <div class="scholarship-summary">
-        <div class="details">
-            <p><b>Closing date:</b><br> 30 Apr 2016</p>
-        </div>
-        <div class="description">
-            <p><strong><a href="">Melbourne International Research Scholarships (MIRS)</a></strong></p>
-            <p>From 2016, the Melbourne International Research Scholarship (MIRS) is part of the <strong><a href="">Melbourne Research Scholarship</a>&nbsp;</strong>program.</p>
-        </div>
-    </div>
-
-</div>                
-
-<h2 class="style-guide">Event page</h2>
-                
-
-<div class="controls">
-    <dl class="filters-nav__list">
-        <dt>Filter events:</dt>
-        <dd><a class="filter" data-filter="all">All</a></dd>
-        <dd><a class="filter" data-filter=".conference">conference</a></dd>
-        <dd><a class="filter" data-filter=".lecture">free lectures</a></dd>
-        <dd><a class="filter" data-filter=".seminars">seminars</a></dd>
-        <dd><a class="filter" data-filter=".orientation">welcome/orientation</a></dd>
-        <dd><a class="filter" data-filter=".future">future student events</a></dd>
-        <dd><a class="filter" data-filter=".other">other</a></dd>
-    </dl>
-</div>
-
-    
-<div class="article">   
-    <div class="event">
-        <div class="details">
-            <p><i class="fa fa-calendar"></i> 9 Mar 2016<br>
-               <i class="fa fa-clock-o"></i> 10am-12pm</p>
-        </div>
-        <div class="description">
-            <h2><a href="http://melbourne-cshe.unimelb.edu.au/study/professional-development/melbourne_engagement_lab">What have you got to say?</a></h2>
-            <p>The workshop will look at tapping into personal research and areas of interest and matching them with what the marketplace is looking for to come up with saleable ideas for topics for commercial writing. It will look at the potential outlets for these ideas and how best to come up with a &lsquo;fit&rsquo; that will be attractive to publishers and editors. This workshop is part of the Melbourne Engagement Lab program hosted by the Centre for the Study of Higher Education.</p>
-        </div>
-    </div>
+&lt;div class=&quot;profile&quot;&gt;
+    &lt;figure&gt;
+        &lt;img src=&quot;http://placehold.it/150x150&quot; alt=&quot;&quot;&gt;
+    &lt;/figure&gt;
+    &lt;div class=&quot;details&quot;&gt;
+        &lt;h4&gt;&lt;a href=&quot;//www.findanexpert.unimelb.edu.au/display/person194117&quot;&gt;Sally Beadle&lt;/a&gt;&lt;/h4&gt;
+        &lt;p class=&quot;info&quot;&gt;&lt;span class=&quot;tel&quot;&gt;9035 7810&lt;/span&gt; &lt;a class=&quot;email&quot; href=&quot;mailto:beadles@unimelb.edu.au&quot;&gt;Sally Beadle&lt;/a&gt; &lt;a class=&quot;twitter&quot; href=&quot;https://twitter.com/&quot;&gt;@Beadle&lt;/a&gt;&lt;/p&gt;
+        &lt;div class=&quot;collapse&quot;&gt;
+            &lt;p&gt;Sally rejoined the Centre in February 2013 to work on a range of research and consultancy projects in the area of adolescent health and wellbeing.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;more-details&quot;&gt;
+            &lt;p&gt;This included adapting and implementing the Connections program for Bangladesh and monitoring and evaluation of the Prevention of Violence Program in Papua, Indonesia, as well as Australian-based research with Centre for Multicultural Youth (CMY) and the Youth Support and Advocacy Service (YSAS). In 2013, Sally also continued her Masters in International Public Health from the University of Queensland.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+        </code>
+    </pre>
 </div>
