@@ -115,6 +115,9 @@ $grid-columns: 8;
     /*
      * Special 1/3 layout - stacked in mobile, two colum in tablet, three colums in desktop
      */
+    .col-3max {
+        @include clearfix;
+    }
     .col-3max > div {
         margin-bottom: 3em;
         @include breakpoint(medium-up) {
@@ -131,6 +134,9 @@ $grid-columns: 8;
     /*
      * Special 1/4 layout - stacked in mobile, two colum in tablet, three colums in desktop
      */
+    .col-4max {
+        @include clearfix;
+    }
     .col-4max > div {
         margin-bottom: 3em;
         @include breakpoint(medium-up) {
@@ -147,6 +153,9 @@ $grid-columns: 8;
     /*
      * Special 1/2 layout - stacked in mobile, two colum in tablet and up
      */
+    .col-2max {
+        @include clearfix;
+    }
     .col-2max > div {
         margin-bottom: 3em;
         @include breakpoint(medium-up) {
