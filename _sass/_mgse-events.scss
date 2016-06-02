@@ -70,7 +70,10 @@
 /* initiate events sorting*/ 
 #container .mix { 
     display: none; 
-} 
+}
+#container .news-wrap {
+    width: 100%;
+}
 /* hide div for when no events */ 
 .hide { 
     display: none; 
