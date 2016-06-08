@@ -7,22 +7,21 @@ heroImage:  http://education.unimelb.edu.au/__data/assets/image/0009/1862163/stu
 ---
 
 <div class="courses">
-    <section class="filter">
-        <form action="" method="get">
-            <fieldset>
-                <legend>Filter by:</legend>
-                <label class="research"><input type="checkbox" value="Doctors"> Graduate Research</label>
-                <label class="masters"><input type="checkbox" value="Masters"> Masters</label>
-                <label class="gradcert"><input type="checkbox" value="GradCert"> Graduate Certificates</label>
-                <label class="profcert"><input type="checkbox" value="ProfCert"> Professional Certificates</label>
-            </fieldset>
-        </form>
-    </section>
-    <section class="theme clearfix">
+    <form class="filter" action="#" method="get">
+        <fieldset>
+            <legend>Filter by:</legend>
+            <label class="research"><input type="checkbox" value="research"> Graduate Research</label>
+            <label class="masters"><input type="checkbox" value="master"> Masters</label>
+            <label class="gradcert"><input type="checkbox" value="gradcert"> Graduate Certificates</label>
+            <label class="profcert"><input type="checkbox" value="profcert"> Professional Certificates</label>
+            <a href="#" class="clear">Clear</a>
+        </fieldset>
+    </form>
+    <section class="theme clearfix border-bottom">
         <div class="left">
             <h2>Become a teacher</h2>
             <p>Courses to become a teacher in Early Childhood, Primary and Secondary settings.</p>
-            <a class="button">Learn more</a>
+            <a class="button" href="become-a-teacher.html">Learn more</a>
         </div>
         <div class="right">
             <ul class="course-list">
@@ -41,7 +40,6 @@ heroImage:  http://education.unimelb.edu.au/__data/assets/image/0009/1862163/stu
             </ul>
         </div>
     </section>
-    <hr>
     <section class="theme clearfix">
         <div class="left">
             <h2>Arts, History and Languages</h2>
@@ -99,22 +97,22 @@ heroImage:  http://education.unimelb.edu.au/__data/assets/image/0009/1862163/stu
         <div class="right">
             <ul class="course-list">
                 <li>
-                    <a href="./?a=618726" data-courselevel="doctorate"><small>Doctor of</small> Education</a>
+                    <a href="./?a=618726" data-courselevel="doctorate" data-research="yes"><small>Doctor of</small> Education</a>
                 </li>
                 <li>
-                    <a href="./?a=617607" data-courselevel="master"><small>Master of</small> Education</a>
+                    <a href="./?a=617607" data-courselevel="master" data-research="yes"><small>Master of</small> Education</a>
                 </li>
                 <li>
                     <a href="./?a=617607" data-courselevel="gradcert"><small>Graduate Certificate in</small> Education</a>
                 </li>
                 <li>
-                    <a href="./?a=619588" data-courselevel="gradcert"><small>Graduate Certificate in</small> Education Research</a>
+                    <a href="./?a=619588" data-courselevel="gradcert" data-research="yes"><small>Graduate Certificate in</small> Education Research</a>
                 </li>
                 <li>
-                    <a href="./?a=619582" data-courselevel="doctorate"><small>Doctor of</small> Philosophy - Education</a>
+                    <a href="./?a=619582" data-courselevel="doctorate" data-research="yes"><small>Doctor of</small> Philosophy - Education</a>
                 </li>
                 <li>
-                    <a href="https://handbook.unimelb.edu.au/view/current/MR-PHILEDU" data-courselevel="master"><small>Master of</small> Philosophy - Education</a>
+                    <a href="https://handbook.unimelb.edu.au/view/current/MR-PHILEDU" data-courselevel="master" data-research="yes"><small>Master of</small> Philosophy - Education</a>
                 </li>
             </ul>
         </div>
@@ -180,7 +178,7 @@ heroImage:  http://education.unimelb.edu.au/__data/assets/image/0009/1862163/stu
                     <a href="http://melbourne-cshe.unimelb.edu.au/study/award-courses/graduate-certificate-in-advanced-learning-and-leadership" data-courselevel="gradcert"><small>Graduate Certificate in</small> Advanced Learning and Leadership</a>
                 </li>
                 <li>
-                    <a href="./?a=618843" data-courselevel="master"><small>Master of</small> Education <span>(Education Management)</span></a>
+                    <a href="./?a=618843" data-courselevel="master" data-research="yes"><small>Master of</small> Education <span>(Education Management)</span></a>
                 </li>
                 <li>
                     <a href="./?a=619347" data-courselevel="master"><small>Master of</small> Instructional Leadership</a>
@@ -217,7 +215,7 @@ heroImage:  http://education.unimelb.edu.au/__data/assets/image/0009/1862163/stu
                     <a href="./?a=619619" data-courselevel="master"><small>Master of</small> Education <span>(Student Wellbeing)</span></a>
                 </li>
                 <li>
-                    <a href="./?a=618850" data-courselevel="master"><small>Master of</small> Educational Pschology/Doctor of Philosophy</a>
+                    <a href="./?a=618850" data-courselevel="master" data-research="yes"><small>Master of</small> Educational Pschology/Doctor of Philosophy</a>
                 </li>
                 <li>
                     <a href="./?a=618850" data-courselevel="master"><small>Master of</small> Educational Psychology</a>
@@ -237,12 +235,12 @@ heroImage:  http://education.unimelb.edu.au/__data/assets/image/0009/1862163/stu
 
     <section class="theme clearfix">
         <div class="left">
-            <h2>Science, Matehmatics and Evaluation</h2>
+            <h2>Science, Mathematics and Evaluation</h2>
         </div>
         <div class="right">
             <ul class="course-list">
                 <li>
-                    <a href="./?a=619047" data-courselevel="master"><small>Master of</small> Evaluation</a>
+                    <a href="./?a=619047" data-courselevel="master" data-research="yes"><small>Master of</small> Evaluation</a>
                 </li>
                 <li>
                     <a href="./?a=619047" data-courselevel="gradcert"><small>Graduate Certificate in</small> Evaluation</a>
@@ -250,6 +248,40 @@ heroImage:  http://education.unimelb.edu.au/__data/assets/image/0009/1862163/stu
             </ul>
         </div>
     </section>
+    <section class="theme clearfix border-top">
+        <div class="left">
+            <h2>Suspended or discontinued courses</h2>
+        </div>
+        <div class="right">
+            <ul class="course-list">
+                <li>
+                    <a href="./?a=619611" data-courselevel="profcert"><small>Professional Certificate in</small> Chinese Language Teaching</a>
+                </li>
+                <li>
+                    <a href="./?a=619438" data-courselevel="master"><small>Master of</small> Education <span>(Language Intervention and Hearing Impairment)</span></a>
+                </li>
+                <li>
+                    <a href="./?a=619438" data-courselevel="gradcert"><small>Graduate Certificate in</small> Education <span>(Language Intervention and Hearing Impairment)</span></a>
+                </li>
+                <li>
+                    <a href="./?a=619595" data-courselevel="master"><small>Master of</small> Education <span>(Special Education, Inclusion and Early Intervention)</span></a>
+                </li>
+                <li>
+                    <a href="./?a=619561" data-courselevel="master"><small>Master of</small> Education <span>(Specific Learning Difficulties)</span></a>
+                </li>
+                <li>
+                    <a href="./?a=619595" data-courselevel="gradcert"><small>Graduate Certificate in</small> Educational Studies <span>(Inclusion and Special Education)</span></a>
+                </li>
+                <li>
+                    <a href="./?a=619455" data-courselevel="master"><small>Master of</small> Literacy</a>
+                </li>
+                <li>
+                    <a href="./?a=619529" data-courselevel="master"><small>Master of</small> Numeracy</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    
 </div>
 
 <div class="alert">

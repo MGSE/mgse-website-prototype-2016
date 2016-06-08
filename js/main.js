@@ -70,4 +70,51 @@ $(document).ready(function () {
         $(this).hide().parents('.collapse').next('.more-details').slideDown();
     });
     
+    /*
+     * Course filter
+     */
+    $('.courses .filter input').change(function(){
+        
+        $('.course-list a').fadeOut();
+        $('.courses .theme').fadeOut();
+        
+        /* if all filters unselected bring back all courses */
+        if($('.courses .filter input:checked').length == 0) {
+            $('.courses .theme').fadeIn();
+            $('.course-list a').fadeIn();
+        }
+        
+        /* if Grad research filter selected clear other filters and show research courses */
+        if($(this).val() == 'research') {
+            $('.courses .theme').each(function(){
+                if($(this).find('a[data-research="yes"]').length > 0) {
+                    $(this).fadeIn();
+                    $(this).find('a[data-research="yes"]').fadeIn();
+                }
+                $('.courses .filter input:checked:not([value="research"])').prop('checked', false);
+            });
+        } else {
+            /* if Course level */
+            $('.courses .theme').each(function(){
+                currentTheme = $(this);
+                $('.courses .filter input:checked').each(function(){
+                    filter = $(this).val();
+                    if(currentTheme.find('a[data-courselevel="'+filter+'"]').length > 0) {
+                        //if(currentTheme.is(":hidden")){
+                            currentTheme.fadeIn();
+                        //}
+                        //alert(filter);
+                        currentTheme.find('a[data-courselevel="'+filter+'"]').fadeIn();
+                    }
+                });
+            });
+        }
+        
+    });
+    $('.courses .filter .clear').click(function(event){
+        event.preventDefault();
+        $('.courses .filter input:checked').prop('checked', false);
+        $('.course-list a').fadeOut().fadeIn();
+        $('.courses .theme').fadeOut().fadeIn();
+    });
 });
