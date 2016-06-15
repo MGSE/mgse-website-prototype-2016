@@ -15,9 +15,6 @@
     margin: 0 10px 10px 0;
     padding: 5px 8px;
     border-radius: 3px;
-    &.doctors {
-        background: #009DDC;
-    }
     &.masters {
         background: #B7D1ED;
     }
@@ -91,22 +88,22 @@
     background: #C4C4C5;
     color: #444;
     border-radius: 3px;
+    overflow: hidden;
 }
 .course-list a:hover {
-    /*box-shadow: 0 1px 3px 0 #d4d4d5,0 0 0 1px #d4d4d5;*/
-    box-shadow: 0 1px 3px 0 #00447C,0 0 0 1px #00447C;
+    box-shadow: 0 1px 3px 0 #00447C;
 }
 .course-list small,
 .course-list span {
     display: block;
-    font-weight: normal;
 }
 .course-list small {
+    font-weight: normal;
     font-size: 0.7em;
 }
 .course-list span {
     display: block;
-    font-size: 0.9em;
+    font-size: 0.8em;
 }
 .course-list a[data-courselevel="doctorate"] {
     background: #FFFFFF;
@@ -117,4 +114,58 @@
 }
 .course-list a[data-courselevel="gradcert"] {
     background: #E3F3FF;
+}
+
+.course-list.extra a {
+    position: relative;
+    img, p {
+        display: none;
+    }
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    p {
+        font-size: 0.8em;
+        margin: 5px 0;
+    }
+    &:hover {
+        transform: scale(1.5);
+        height: auto;
+        padding-top: 87px;
+        z-index: 999;
+        background: #E3F3FF;
+        font-size: 0.667em;
+        img, p {
+            display: block;
+        }
+    }
+    transition: transform 0.5s ease;
+}
+
+/*
+ * Course page
+ */
+.course-types {
+    margin: -1.2em 0 3em 0;
+    span {
+        border-bottom: 10px solid #C4C4C5;
+        margin-right: 20px;
+        font-weight: bold;
+        display: inline-block;
+        &.doctorate {
+            border-bottom: 10px solid #009DDC;
+        }
+        &.masters {
+            border-bottom: 10px solid #B7D1ED;
+        }
+        &.gradcert {
+             border-bottom: 10px solid #E3F3FF;
+        }
+        &.profcert {
+             border-bottom: 10px solid #C4C4C5;
+        }
+    }
 }
