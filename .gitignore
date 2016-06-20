@@ -1,8 +1,13 @@
 # Jekyll files #
 ###################
 _site/
+_vendor/
 .sass-cache/
 .jekyll-metadata
+Gemfile
+Gemfile.lock
+.bundle/config
+.gitignore
 
 # Compiled source #
 ###################
@@ -41,3 +46,4 @@ _site/
 .Trashes
 ehthumbs.db
 Thumbs.db
+_vendor/bundle/ruby/2.3.0/bin/bourbon

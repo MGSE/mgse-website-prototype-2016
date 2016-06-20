@@ -117,4 +117,48 @@ $(document).ready(function () {
         $('.course-list a').fadeOut().fadeIn();
         $('.courses .theme').fadeOut().fadeIn();
     });
+	
+	/*------NEWS SORTER ----------------------*/
+	
+	var categories = []; //Array of classes for each list item
+	var currentItem = "all"; //Current category
+	
+	//Add list item classes to array
+	$('.filter-menu li').each(function(){
+  		categories.push($(this).attr('class'));
+	});
+	
+	//If user clicks list item, get the list item's class.
+	//If 'all' selected, reveal all .news-wrap items, otherwise 
+	//For each ".news-wrap", if it has matching class as selected slideDown, otherwise slideUp
+	function sortItems(currentItem) {
+		if(currentItem == "all") {
+			
+			$(".news-wrap").each(function() {
+			    $(this).slideDown("medium");
+			});
+		} else {
+			$(".news-wrap").each(function() {
+				if($(this).hasClass(currentItem))
+				{
+					$(this).slideDown("medium"); //Show
+				} else {
+					$(this).slideUp("medium"); //Hide
+				}
+			});
+		}
+	}
+	
+	//Call for menu sorter
+	$(".filter-menu li").click(function() {
+		/*switch "selected" li */
+		$(".selected-item").removeClass("selected-item");
+		$(this).addClass("selected-item");
+		currentItem = $(this).attr("role");
+		console.log(currentItem);
+		sortItems(currentItem);
+	});
+	
+	//Do initial call for document.ready
+	sortItems(currentItem);
 });

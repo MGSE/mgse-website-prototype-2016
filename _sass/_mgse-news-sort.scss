@@ -1,0 +1,31 @@
+/* === MGSE NEWS SORTING === */
+
+.filter-menu
+{
+    list-style-type: none;
+	li
+	{
+		display: inline-block;
+		margin-right:7px;
+		background-color:#fff;
+		background-image: none;
+		color:#005596;
+		padding: 3px 7px;
+		border-radius: 3px;
+		transition: all ease-in-out 0.5s;
+		-webkit-transition: all ease-in-out 0.5s;
+		text-transform: uppercase;
+	}
+	li:hover
+	{
+		background-color:#005596;
+		color: #fff;
+		cursor: pointer;
+	}
+	.selected-item 
+	{
+		background-color:#005596;
+		color: #fff;
+	}
+}
+
