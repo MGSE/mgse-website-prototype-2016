@@ -134,11 +134,11 @@ $(document).ready(function () {
 	function sortItems(currentItem) {
 		if(currentItem == "all") {
 			
-			$(".news-wrap").each(function() {
+			$(".news-wrap, #container .mix").each(function() {
 			    $(this).slideDown("medium");
 			});
 		} else {
-			$(".news-wrap").each(function() {
+			$(".news-wrap, #container .mix").each(function() {
 				if($(this).hasClass(currentItem))
 				{
 					$(this).slideDown("medium"); //Show
