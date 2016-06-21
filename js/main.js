@@ -91,11 +91,14 @@ $(document).ready(function () {
                     $(this).fadeIn();
                     $(this).find('a[data-research="yes"]').fadeIn();
                 }
+                // clear other filters
                 $('.courses .filter input:checked:not([value="research"])').prop('checked', false);
             });
         } else {
             /* if Course level */
             $('.courses .theme').each(function(){
+                // clear grad research filters
+                $('.courses .filter input[value="research"]').prop('checked', false);
                 currentTheme = $(this);
                 $('.courses .filter input:checked').each(function(){
                     filter = $(this).val();
