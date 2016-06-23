@@ -563,6 +563,7 @@ ul.tabs {
     @include clearfix;
     padding-bottom: 1em;
     margin-bottom: 2em;
+    width: 100%;
     .details {
         float: left;
         width: 20%;
