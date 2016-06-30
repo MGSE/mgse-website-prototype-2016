@@ -116,8 +116,14 @@
     background: #E3F3FF;
 }
 
-.course-list.extra a {
+.course-list.extra li {
     position: relative;
+    width: 204px;
+    height: 104px;
+}
+.course-list.extra a {
+    position: absolute;
+    cursor: pointer;
     img, p {
         display: none;
     }
