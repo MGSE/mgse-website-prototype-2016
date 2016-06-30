@@ -318,6 +318,7 @@ ul.tabs {
     border-bottom: 2px solid $web-10-blue;
     @include clearfix;
     margin-bottom: 0;
+    margin-top: 3em;
     li {
         display: inline-block;
         float: left;
@@ -377,7 +378,7 @@ ul.tabs {
 
 
 /*
- * Acoordion
+ * Accoordion
  */
 .accordion-label {
     max-width: 745px;
@@ -601,5 +602,21 @@ ul.tabs {
     > div {
         border-left: 2px solid #E3F3FF;
         padding-left: 10px;
+    }
+}
+
+/*
+ * course page call to action buttons
+ */
+.article .course-ctas {
+    display: flex;
+    @include breakpoint(medium-up) {
+        display: none;
+    }
+}
+.side-bar .course-ctas {
+    display: none;
+    @include breakpoint(medium-up) {
+        display: flex;
     }
 }
