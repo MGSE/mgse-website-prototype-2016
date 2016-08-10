@@ -617,6 +617,7 @@ ul.tabs {
 .side-bar .course-ctas {
     display: none;
     @include breakpoint(medium-up) {
+        display: block;
         display: flex;
     }
 }

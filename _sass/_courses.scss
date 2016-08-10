@@ -18,32 +18,37 @@
     margin: 0 10px 10px 0;
     padding: 5px 8px;
     border-radius: 3px;
-    &.masters {
+    &.gradcert {
         background: #B7D1ED;
     }
-    &.gradcert {
+    &.profcert {
         background: #E3F3FF;
     }
-    &.profcert {
-        background: #C4C4C5;
+    &.masters {
+        padding: 4px 7px;
+        border: 1px solid #009DDC;
     }
 }
 .theme {
     margin-top: 4em;
     .left {
-        width: 45%;
-        margin-right: 5%;
-        max-width: 235px;
-        clear: both;
-        float: left;
+        @media only screen and (min-width: px-to-em(400)) {
+            width: 45%;
+            margin-right: 5%;
+            max-width: 235px;
+            clear: both;
+            float: left;
+        }
         @media only screen and (min-width: px-to-em(600)) {
             width: 20%;
         }
     }
     .right {
-        width: 50%;
-        max-width: 985px;
-        float: left;
+        @media only screen and (min-width: px-to-em(400)) {
+            width: 50%;
+            max-width: 985px;
+            float: left;
+        }
         @media only screen and (min-width: px-to-em(600)) {
             width: 70%;
         }
@@ -83,8 +88,10 @@
 .course-list a {
     border-bottom: none;
     display: block;
-    width: 200px;
-    height: 100px;
+    /*width: 200px;
+    height: 100px;*/
+    width: 200/(16*1.1)*1em;
+    height: 100/(16*1.1)*1em;
     padding: 10px 12px;
     margin: 0 4px 4px 0;
     text-decoration: none;
@@ -108,14 +115,14 @@
     display: block;
     font-size: 0.8em;
 }
-.course-list a[data-courselevel="doctorate"] {
+.course-list a[data-courselevel="master"] {
     background: #FFFFFF;
     border: 1px solid #009DDC;
 }
-.course-list a[data-courselevel="master"] {
+.course-list a[data-courselevel="gradcert"] {
     background: #B7D1ED;
 }
-.course-list a[data-courselevel="gradcert"] {
+.course-list a[data-courselevel="profcert"] {
     background: #E3F3FF;
 }
 
@@ -147,6 +154,7 @@
         z-index: 999;
         background: #E3F3FF;
         font-size: 0.667em;
+        border: 0;
         img, p {
             display: block;
         }
@@ -164,17 +172,14 @@
         margin-right: 20px;
         font-weight: bold;
         display: inline-block;
-        &.doctorate {
+        &.masters {
             border-bottom: 10px solid #009DDC;
         }
-        &.masters {
+        &.gradcert {
             border-bottom: 10px solid #B7D1ED;
         }
-        &.gradcert {
-             border-bottom: 10px solid #E3F3FF;
-        }
         &.profcert {
-             border-bottom: 10px solid #C4C4C5;
+             border-bottom: 10px solid #E3F3FF;
         }
     }
 }
