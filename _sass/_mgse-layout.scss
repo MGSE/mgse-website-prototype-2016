@@ -73,7 +73,7 @@ $grid-columns: 8;
      */
     article,
     .article {
-        /*margin-bottom: 3em;*/
+        margin-bottom: 3em;
         @include breakpoint(medium-up) {
             @include span-columns(4);
         }
@@ -82,7 +82,7 @@ $grid-columns: 8;
         }
     }
     .side-bar {
-        /*margin-bottom: 3em;*/
+        margin-bottom: 3em;
         @include breakpoint(medium-up) {
             clear: none;
             @include span-columns(4);
