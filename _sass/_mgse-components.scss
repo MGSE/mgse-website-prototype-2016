@@ -380,30 +380,33 @@ ul.tabs {
  * Accoordion
  */
 .accordion-label {
+    color: #005596;
     max-width: 745px;
+    border-bottom-color: $web-blue;
+    border-bottom: 1px solid $web-sky-blue;
+    padding: 0.452em 40px 0.452em 0;
+    display: block;
+    cursor: pointer;
+    line-height: 1.618em;
+    margin-bottom: 0.618em;
+    margin-top: 0;
+    position: relative;    
+    &:after {
+        font-family: FontAwesome;
+        color: #005596;
+        content: "\f078";
+        font-size: 0.732em;
+        position: absolute;
+        right: 7px;
+    }
+    &.open {
+       &:after { 
+           content: "\f077";
+       }
+    }
     a {
-        border-bottom-color: $web-blue;
-        border-bottom: 1px solid $web-sky-blue;
-        padding: 0.452em 40px 0.452em 0;
-        display: block;
+        border-bottom: none;
         cursor: pointer;
-        line-height: 1.618em;
-        margin-bottom: 0.618em;
-        margin-top: 0;
-        position: relative;    
-        &:after {
-            font-family: FontAwesome;
-            color: #005596;
-            content: "\f078";
-            font-size: 0.732em;
-            position: absolute;
-            right: 7px;
-        }
-        &.open {
-           &:after { 
-               content: "\f077";
-           }
-        }
     }
 }
 .accordion-content {

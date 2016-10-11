@@ -50,9 +50,9 @@ $(document).ready(function () {
     /* append extra text for screen readers so user knows its a toggle */
     $('.accordion-label a').append('<span class="visuallyhidden">, show details</span>');
     /* label click handler */
-    $('.accordion-label a').on('click', function (event) {
+    $('.accordion-label').on('click', function (event) {
         event.preventDefault();
-        $(this).parent().next('.accordion-content').slideToggle();
+        $(this).next('.accordion-content').slideToggle();
         $(this).toggleClass('open');
     });
     
@@ -120,4 +120,32 @@ $(document).ready(function () {
         $('.course-list a').fadeOut().fadeIn();
         $('.courses .theme').fadeOut().fadeIn();
     });
+
+    /*
+     * tracks - breadth
+     * open and close tracks in mobile view
+     */
+    $('.track > h2').click(function(){
+        if($( window ).width() < 801) {
+            $(this).toggleClass('open').siblings().slideToggle();
+        }
+    });
+    
+    
+    $(window).resize(function(){
+        
+        /*
+         * tracks - breadth
+         * reset 
+         */
+	   if ($(window).width() > 800){	
+		   $('.track > h2').siblings().css('display','auto');
+       } else {
+           if($('.track > h2').siblings().css('display') == 'block'){
+               $(this).addClass('open');
+           }
+       }
+    })
+
 });
+
