@@ -17,8 +17,7 @@
 /*
  * Level 2 page preview
  */
-.page-preview,
-.preview-vertical {
+.page-preview {
     h2 {
         border-bottom: 2px solid $web-blue;
     }
@@ -68,6 +67,9 @@
  * Sub-site home page vertical page preview
  */
 .preview-vertical {
+    .group-heading {
+        border-bottom: 2px solid $web-blue;
+    }
     div {
         @include clearfix;
         clear: both;
