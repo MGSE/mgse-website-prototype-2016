@@ -15,37 +15,32 @@
     margin: 0 10px 10px 0;
     padding: 5px 8px;
     border-radius: 3px;
-    &.gradcert {
+    &.masters {
         background: #B7D1ED;
     }
-    &.profcert {
+    &.gradcert {
         background: #E3F3FF;
     }
-    &.masters {
-        padding: 4px 7px;
-        border: 1px solid #009DDC;
+    &.profcert {
+        background: #C4C4C5;
     }
 }
 .theme {
     margin-top: 4em;
     .left {
-        @media only screen and (min-width: px-to-em(400)) {
-            width: 45%;
-            margin-right: 5%;
-            max-width: 235px;
-            clear: both;
-            float: left;
-        }
+        width: 45%;
+        margin-right: 5%;
+        max-width: 235px;
+        clear: both;
+        float: left;
         @media only screen and (min-width: px-to-em(600)) {
             width: 20%;
         }
     }
     .right {
-        @media only screen and (min-width: px-to-em(400)) {
-            width: 50%;
-            max-width: 985px;
-            float: left;
-        }
+        width: 50%;
+        max-width: 985px;
+        float: left;
         @media only screen and (min-width: px-to-em(600)) {
             width: 70%;
         }
@@ -65,11 +60,10 @@
     }
 }
 .course-list {
-    @include clearfix;
     max-width: 820px;
     padding: 0;
     margin: 0 auto;
-    list-style: none;
+    list-style: noen;
 }
 .course-list > li {
     background-image: none;
@@ -86,8 +80,8 @@
 .course-list a {
     border-bottom: none;
     display: block;
-    width: 200/(16*1.1)*1em; /* 200px 1.1 is font size inherited from li */
-    height: 100/(16*1.1)*1em; /* 100px 1.1 is font size inherited from li */
+    width: 200px;
+    height: 100px;
     padding: 10px 12px;
     margin: 0 4px 4px 0;
     text-decoration: none;
@@ -111,29 +105,19 @@
     display: block;
     font-size: 0.8em;
 }
-.course-list a[data-courselevel="master"] {
+.course-list a[data-courselevel="doctorate"] {
     background: #FFFFFF;
     border: 1px solid #009DDC;
 }
-.course-list a[data-courselevel="gradcert"] {
+.course-list a[data-courselevel="master"] {
     background: #B7D1ED;
 }
-.course-list a[data-courselevel="profcert"] {
+.course-list a[data-courselevel="gradcert"] {
     background: #E3F3FF;
 }
 
-.course-list.extra {
-    margin: 2em auto;
-    max-width: 100%;
-}
-.course-list.extra li {
-    position: relative;
-    width: 204px;
-    height: 104px;
-}
 .course-list.extra a {
-    position: absolute;
-    cursor: pointer;
+    position: relative;
     img, p {
         display: none;
     }
@@ -150,16 +134,15 @@
     &:hover {
         transform: scale(1.5);
         height: auto;
-        padding-top: 72px;
+        padding-top: 87px;
         z-index: 999;
         background: #E3F3FF;
-        font-size: 0.8em;
-        border: 0;
+        font-size: 0.667em;
         img, p {
             display: block;
         }
     }
-    transition: transform 0.5s ease-in;
+    transition: transform 0.5s ease;
 }
 
 /*
@@ -172,14 +155,17 @@
         margin-right: 20px;
         font-weight: bold;
         display: inline-block;
-        &.masters {
+        &.doctorate {
             border-bottom: 10px solid #009DDC;
         }
-        &.gradcert {
+        &.masters {
             border-bottom: 10px solid #B7D1ED;
         }
-        &.profcert {
+        &.gradcert {
              border-bottom: 10px solid #E3F3FF;
+        }
+        &.profcert {
+             border-bottom: 10px solid #C4C4C5;
         }
     }
 }
