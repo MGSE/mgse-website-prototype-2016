@@ -73,55 +73,84 @@ $(document).ready(function () {
     /*
      * Course filter
      */
-    $('.courses .filter input').change(function(){
-        
-        $('.course-list a').fadeOut();
-        $('.courses .theme').fadeOut();
-        
-        /* if all filters unselected bring back all courses */
-        if($('.courses .filter input:checked').length == 0) {
-            $('.courses .theme').fadeIn();
-            $('.course-list a').fadeIn();
-        }
-        
-        /* if Grad research filter selected clear other filters and show research courses */
-        if($(this).val() == 'research') {
-            $('.courses .theme').each(function(){
-                if($(this).find('a[data-research="yes"]').length > 0) {
-                    $(this).fadeIn();
-                    $(this).find('a[data-research="yes"]').fadeIn();
-                }
-                // clear other filters
-                $('.courses .filter input:checked:not([value="research"])').prop('checked', false);
-            });
-        } else {
-            /* if Course level */
-            $('.courses .theme').each(function(){
-                // clear grad research filters
-                $('.courses .filter input[value="research"]').prop('checked', false);
-                currentTheme = $(this);
-                $('.courses .filter input:checked').each(function(){
-                    filter = $(this).val();
-                    if(currentTheme.find('a[data-courselevel="'+filter+'"]').length > 0) {
-                        //if(currentTheme.is(":hidden")){
-                            currentTheme.fadeIn();
-                        //}
-                        //alert(filter);
-                        currentTheme.find('a[data-courselevel="'+filter+'"]').fadeIn();
-                    }
-                });
-            });
-        }
-        
+	 
+	 /*Get the class of the sorting list's parent container*/
+	 
+	 var filterName = $(".filter").parent().prop("className");
+	 
+	 function fadeOutItems(filterName, showItems) {
+		
+		$('.'+filterName+'-list li').fadeOut("fast", function (){
+			$('.'+filterName+' .category').fadeOut("fast", function() {
+				showItems(filterName);
+			});
+		});
+	 }
+	 
+	 function fadeInItems(filterName) {
+		 $('.'+filterName+' .category').fadeIn("fast",function(){
+			 $('.'+filterName+'-list li').fadeIn();
+		 });
+	 }
+	 
+	 function showItems(filterName) {
+		 	
+			/* if all filters unselected bring back all items */
+			if($('.'+filterName+' .filter input:checked').length === 0) {
+				fadeInItems(filterName);    
+			}
+			
+			/* if radio button checkbox selected, clear filters, only show radio items*/
+			if($(this).hasClass("radio")) {
+				$('.'+filterName+' .category').each(function(){
+					if($(this).find('a[data-research="yes"]').length > 0) {
+						$(this).fadeIn();
+						$(this).find('a[data-research="yes"]').fadeIn();
+					}
+					// clear other filters
+					$('.'+filterName+' .filter input:checked:not([value="research"])').prop('checked', false);
+				});
+			} else {
+				/* otherwise show filter selected items */
+				$('.'+filterName+' .category').each(function(){
+					/* clear radio checkbox*/
+					$('.'+filterName+' .filter input[class="radio"]').prop('checked', false);
+					
+					/*go through category by category*/
+					var currentCategory = $(this);
+					
+					/*within each category, go through and find tagged items*/
+					$('.'+filterName+' .filter input:checked').each(function(){
+						
+						var activeFilter = $(this).val();
+						console.log(activeFilter);
+						if(currentCategory.find('[data-filter~="'+activeFilter+'"]').length > 0) {
+							currentCategory.fadeIn("fast", function() {
+								currentCategory.find('[data-filter~="'+activeFilter+'"]').fadeIn();
+							});
+							
+						}
+					});
+				});
+			}
+		}
+		
+	 $('.'+filterName+' .filter input').change(function(){
+        fadeOutItems(filterName, showItems);
     });
-    $('.courses .filter .clear').click(function(event){
+	
+	/*Clear filter*/
+    $('.'+filterName+' .filter .clear').click(function(event){
         event.preventDefault();
-        $('.courses .filter input:checked').prop('checked', false);
-        $('.course-list a').fadeOut().fadeIn();
-        $('.courses .theme').fadeOut().fadeIn();
+        $('.'+filterName+' .filter input:checked').prop('checked', false);
+        fadeOutItems(filterName, showItems);
+		
     });
 	
 	/*------NEWS SORTER ----------------------*/
+	
+	
+	
 	
 	var categories = []; //Array of classes for each list item
 	var currentItem = "all"; //Current category
