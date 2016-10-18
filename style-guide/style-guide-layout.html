@@ -1,0 +1,247 @@
+---
+#jekyll front matter
+
+layout: style-guide
+title: Web style guide
+sub-title: Layout
+bodyClass:
+heroImage:  http://education.unimelb.edu.au/__data/assets/image/0007/1244833/queenberry_floor_landingLive.jpg
+---
+
+<h2 class="style-guide">Layout</h2>
+
+<h3 class="style-guide">Style A</h3>
+<p>Style A layout has a 5/8ths column for the main content and a 3/8ths column for side bar content. These two columns become half-half for portrait tablet viewport (&lt; 801px) and stacked for mobile (&lt; 641 px).</p>
+
+<div class="article">
+    <div style="background: #FDEEF4; height: 200px;">
+        <p>This is where the main page content goes.</p>
+    </div>
+</div>
+<div class="side-bar">
+    <div style="background: #FDEEF4; height: 200px;">
+        <p>This is where additional or summative information goes.</p>
+        <p>Side bar headings are a step down in size to main content headings</p>
+    </div>
+</div>
+
+<div>
+    <pre>
+        <h4>Code</h4>
+        <code>
+&lt;div class=&quot;article&quot;&gt;
+    &lt;!-- This is where the main page content goes. --&gt;
+&lt;/div&gt;
+&lt;div class=&quot;side-bar&quot;&gt;
+    &lt;!-- This is where additional or summative information goes. --&gt;
+&lt;/div&gt;
+        </code>
+    </pre>
+
+    <h3 class="style-guide">Style B</h3>
+</div>
+
+<div class="col-1of2">
+    <div style="background: #FDEEF4; height: 200px;">
+        <p>Main content in this layout is split across columns</p>
+    </div>
+</div>
+<div class="col-2of2">
+    <div style="background: #FDEEF4; height: 200px;">
+        <p>This is the second column</p>
+    </div>
+</div>
+
+<div>
+    <pre>
+        <h4>Code</h4>
+        <code>
+&lt;div class=&quot;col-1of2&quot;&gt;
+    &lt;!-- This is where the main page content goes. --&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-2of2&quot;&gt;
+    &lt;!-- This is where additional or summative information goes. --&gt;
+&lt;/div&gt;
+        </code>
+    </pre>
+
+
+    <h3 class="style-guide">Special 1/3 layout</h3>
+    <p>The special 1/3 layout is used for landing page preview menu.</p>
+</div>
+<div class="col-3max">
+    <div>
+        <div style="background: #FDEEF4; height: 200px;">
+            <p>Used for level 1 page body menu</p>
+        </div>
+    </div>
+    <div>
+        <div style="background: #FDEEF4; height: 200px;">
+            <p>Used for level 1 page body menu</p>
+        </div>
+    </div>
+    <div>
+        <div style="background: #FDEEF4; height: 200px;">
+            <p>Used for level 1 page body menu</p>
+        </div>
+    </div>
+    <div>
+        <div style="background: #FDEEF4; height: 200px;">
+            <p>Used for level 1 page body menu</p>
+        </div>
+    </div>
+    <div>
+        <div style="background: #FDEEF4; height: 200px;">
+            <p>Used for level 1 page body menu</p>
+        </div>
+    </div>
+</div>
+<div>
+    <pre>
+        <h4>Code</h4>
+        <code>
+&lt;div class=&quot;col-3max&quot;&gt;
+    &lt;div&gt;
+        &lt;!-- 1 --&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;!-- 2 --&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;!-- 3 --&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;!-- 4 --&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;!-- 5 --&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+        </code>
+    </pre>
+</div>
+                
+<h3 class="style-guide">Special 1/4 layout</h3>
+<p>The special 1/4 layout is used for project cards.</p>
+
+<div class="col-4max">
+    <div>
+        <div style="background: #FDEEF4; height: 200px;">
+            <p>used for project cards</p>
+        </div>
+    </div>
+    <div>
+        <div style="background: #FDEEF4; height: 200px;">
+            <p>used for project cards</p>
+        </div>
+    </div>
+    <div>
+        <div style="background: #FDEEF4; height: 200px;">
+            <p>used for project cards</p>
+        </div>
+    </div>
+    <div>
+        <div style="background: #FDEEF4; height: 200px;">
+            <p>used for project cards</p>
+        </div>
+    </div>
+    <div>
+        <div style="background: #FDEEF4; height: 200px;">
+            <p>used for project cards</p>
+        </div>
+    </div>
+    <div>
+        <div style="background: #FDEEF4; height: 200px;">
+            <p>used for project cards</p>
+        </div>
+    </div>
+</div>
+<div>
+    <pre>
+        <h4>Code</h4>
+        <code>
+&lt;div class=&quot;col-4max&quot;&gt;
+    &lt;div&gt;
+            &lt;!-- content --&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+            &lt;!-- content --&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+            &lt;!-- content --&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+            &lt;!-- content --&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+            &lt;!-- content --&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+            &lt;!-- content --&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+</div>
+<h3 class="style-guide">Special 1/2 layout</h3>
+<p>The special 1/2 layout is used for profile banks</p>
+
+<div class="col-2max">
+    <div>
+        <div style="background: #FDEEF4; height: 200px;">
+            <p>used for profiles</p>
+        </div>
+    </div>
+    <div>
+        <div style="background: #FDEEF4; height: 200px;">
+            <p>used for profiles</p>
+        </div>
+    </div>
+    <div>
+        <div style="background: #FDEEF4; height: 200px;">
+            <p>used for profiles</p>
+        </div>
+    </div>
+    <div>
+        <div style="background: #FDEEF4; height: 200px;">
+            <p>used for profiles</p>
+        </div>
+    </div>
+    <div>
+        <div style="background: #FDEEF4; height: 200px;">
+            <p>used for profiles</p>
+        </div>
+    </div>
+    <div>
+        <div style="background: #FDEEF4; height: 200px;">
+            <p>used for profiles</p>
+        </div>
+    </div>
+</div>
+<div>
+    <pre>
+        <h4>Code</h4>
+        <code>
+&lt;div class=&quot;col-2max&quot;&gt;
+    &lt;div&gt;
+            &lt;!-- content --&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+            &lt;!-- content --&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+            &lt;!-- content --&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+            &lt;!-- content --&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+            &lt;!-- content --&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+            &lt;!-- content --&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+</div>

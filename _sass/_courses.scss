@@ -1,0 +1,185 @@
+
+.courses {
+    margin-bottom: 4em;
+}
+.courses .filter {
+    margin-top: 4em;
+}
+.courses .filter legend {
+    display: inline;
+    font-weight: 600;
+}
+.courses .filter legend,
+.courses .filter label {
+    display: inline-block;
+    margin: 0 10px 10px 0;
+    padding: 5px 8px;
+    border-radius: 3px;
+    &.gradcert {
+        background: #B7D1ED;
+    }
+    &.profcert {
+        background: #E3F3FF;
+    }
+    &.masters {
+        padding: 4px 7px;
+        border: 1px solid #009DDC;
+    }
+}
+.theme {
+    margin-top: 4em;
+    .left {
+        @media only screen and (min-width: px-to-em(400)) {
+            width: 45%;
+            margin-right: 5%;
+            max-width: 235px;
+            clear: both;
+            float: left;
+        }
+        @media only screen and (min-width: px-to-em(600)) {
+            width: 20%;
+        }
+    }
+    .right {
+        @media only screen and (min-width: px-to-em(400)) {
+            width: 50%;
+            max-width: 985px;
+            float: left;
+        }
+        @media only screen and (min-width: px-to-em(600)) {
+            width: 70%;
+        }
+    }
+    h2 {
+        margin-bottom: 0.2em;
+    }
+    &.border-bottom {
+        padding-bottom: 4em;
+        margin-bottom: 4em;
+        border-bottom: 1px solid #ccc;
+    }
+    &.border-top {
+        padding-top: 4em;
+        margin-top: 4em;
+        border-top: 1px solid #ccc;
+    }
+}
+.course-list {
+    @include clearfix;
+    max-width: 820px;
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+}
+.course-list > li {
+    background-image: none;
+    padding: 0;
+    line-height: 1.4;
+    text-align: left;
+    list-style: none;
+    display: block;
+    float: left;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 0;
+}
+.course-list a {
+    border-bottom: none;
+    display: block;
+    width: 200/(16*1.1)*1em; /* 200px 1.1 is font size inherited from li */
+    height: 100/(16*1.1)*1em; /* 100px 1.1 is font size inherited from li */
+    padding: 10px 12px;
+    margin: 0 4px 4px 0;
+    text-decoration: none;
+    background: #C4C4C5;
+    color: #444;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.course-list a:hover {
+    box-shadow: 0 1px 3px 0 #00447C;
+}
+.course-list small,
+.course-list span {
+    display: block;
+}
+.course-list small {
+    font-weight: normal;
+    font-size: 0.7em;
+}
+.course-list span {
+    display: block;
+    font-size: 0.8em;
+}
+.course-list a[data-courselevel="master"] {
+    background: #FFFFFF;
+    border: 1px solid #009DDC;
+}
+.course-list a[data-courselevel="gradcert"] {
+    background: #B7D1ED;
+}
+.course-list a[data-courselevel="profcert"] {
+    background: #E3F3FF;
+}
+
+.course-list.extra {
+    margin: 2em auto;
+    max-width: 100%;
+}
+.course-list.extra li {
+    position: relative;
+    width: 204px;
+    height: 104px;
+}
+.course-list.extra a {
+    position: absolute;
+    cursor: pointer;
+    img, p {
+        display: none;
+    }
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    p {
+        font-size: 0.8em;
+        margin: 5px 0;
+    }
+    &:hover {
+        transform: scale(1.5);
+        height: auto;
+        padding-top: 72px;
+        z-index: 999;
+        background: #E3F3FF;
+        font-size: 0.8em;
+        border: 0;
+        img, p {
+            display: block;
+        }
+    }
+    transition: transform 0.5s ease-in;
+}
+
+/*
+ * Course page
+ */
+.course-types {
+    margin: -1.2em 0 3em 0;
+    span {
+        border-bottom: 10px solid #C4C4C5;
+        margin-right: 20px;
+        font-weight: bold;
+        display: inline-block;
+        &.masters {
+            border-bottom: 10px solid #009DDC;
+        }
+        &.gradcert {
+            border-bottom: 10px solid #B7D1ED;
+        }
+        &.profcert {
+             border-bottom: 10px solid #E3F3FF;
+        }
+    }
+}
