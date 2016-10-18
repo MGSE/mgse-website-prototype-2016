@@ -166,11 +166,11 @@ $(document).ready(function () {
 	function sortItems(currentItem) {
 		if(currentItem == "all") {
 			
-			$(".news-wrap, #container .mix").each(function() {
+			$(".news-wrap").each(function() {
 			    $(this).slideDown("medium");
 			});
 		} else {
-			$(".news-wrap, #container .mix").each(function() {
+			$(".news-wrap").each(function() {
 				if($(this).hasClass(currentItem))
 				{
 					$(this).slideDown("medium"); //Show

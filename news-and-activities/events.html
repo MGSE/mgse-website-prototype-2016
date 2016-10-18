@@ -1,23 +1,24 @@
 ---
 #jekyll front matter
 
-layout: default
+layout: events
 title: Events
 bodyClass:
 heroImage:  http://education.unimelb.edu.au/__data/assets/image/0008/1068776/research_landing_live.jpg
 ---
 
-Sort by:
-    <ul class="filter-menu">
-        <li role="all" class="selected-item">all</a></li>
-        <li role="conference">conference</a></li>
-        <li role="free">free lectures</a></li>
-        <li role="seminars">seminars</a></li>
-        <li role="orientation">orientation</a></li>
-        <li role="future">future student events</a></li>
-        <li role="other">other</a></li>
-    </ul>
-
+<div class="controls">
+    <dl class="filters-nav__list">
+        <dt>Filter events:</dt>
+        <dd><a class="filter" data-filter="all">All</a></dd>
+        <dd><a class="filter" data-filter=".conference">conference</a></dd>
+        <dd><a class="filter" data-filter=".lecture">free lectures</a></dd>
+        <dd><a class="filter" data-filter=".seminars">seminars</a></dd>
+        <dd><a class="filter" data-filter=".orientation">welcome/orientation</a></dd>
+        <dd><a class="filter" data-filter=".future">future student events</a></dd>
+        <dd><a class="filter" data-filter=".other">other</a></dd>
+    </dl>
+</div>
 <div class="article" id="container">
 <div class="event future student mix">
     <div class="details">
