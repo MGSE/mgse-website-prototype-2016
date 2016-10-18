@@ -50,16 +50,6 @@
         text-shadow: none;
     }
 }
-.download.button:before {
-    font-family: FontAwesome;
-    font-size: 1em;
-    font-weight: bold;
-    margin: 0 12px 0 0;
-    line-height: .5;
-    color: #fff;
-    content: "\f019";
-    text-shadow: none;
-}
 
 /*
  * Tables
@@ -235,29 +225,6 @@ figcaption {
     @include clearfix;
 }
 
-/*
- * Content promo
- */
-.promo {
-    background: $web-sky-blue;
-    padding: 1em;
-    margin-bottom: 2em;
-    @include clearfix;
-    h2 {
-        margin-bottom: 0;
-    }
-    figure {
-        @include breakpoint(medium-up) {
-             margin-bottom: 0;
-        }
-    }
-    a.button {
-        margin: 0;
-    }
-    &.alt {
-        background: rgb(196, 196, 197);
-    }
-}
 
 /*
  * Homepage nav
@@ -584,18 +551,4 @@ ul.tabs {
     border-radius: 3px;
     padding: 20px;
     box-shadow: 0 1px 3px 0 #d4d4d5,0 0 0 1px #d4d4d5;
-}
-
-/*
- * comparison
- */
-.comparison {
-    @include breakpoint(medium-up) {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    > div {
-        border-left: 2px solid #E3F3FF;
-        padding-left: 10px;
-    }
 }
