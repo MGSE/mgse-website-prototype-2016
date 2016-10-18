@@ -39,6 +39,11 @@
         .accordion-label, .accordion-content {
             max-width: 100%;
         }
+        figure.right {
+            float: right;
+            margin-left: flex-gutter();
+            max-width: 40%;
+        }
     }
     .testimonial {
         figure {
