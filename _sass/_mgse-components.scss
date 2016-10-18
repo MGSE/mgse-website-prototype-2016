@@ -95,7 +95,6 @@ table.fees-table {
     width: 100%;
 }
 table.fees-table th {
-    font-family: "Univers W01", "Helvetica", Arial, sans-serif;
     font-size: 0.7em;
     color: #0072C9;
 }
@@ -318,6 +317,7 @@ ul.tabs {
     border-bottom: 2px solid $web-10-blue;
     @include clearfix;
     margin-bottom: 0;
+    margin-top: 3em;
     li {
         display: inline-block;
         float: left;
@@ -377,33 +377,36 @@ ul.tabs {
 
 
 /*
- * Acoordion
+ * Accoordion
  */
 .accordion-label {
+    color: #005596;
     max-width: 745px;
+    border-bottom-color: $web-blue;
+    border-bottom: 1px solid $web-sky-blue;
+    padding: 0.452em 40px 0.452em 0;
+    display: block;
+    cursor: pointer;
+    line-height: 1.618em;
+    margin-bottom: 0.618em;
+    margin-top: 0;
+    position: relative;    
+    &:after {
+        font-family: FontAwesome;
+        color: #005596;
+        content: "\f078";
+        font-size: 0.732em;
+        position: absolute;
+        right: 7px;
+    }
+    &.open {
+       &:after { 
+           content: "\f077";
+       }
+    }
     a {
-        border-bottom-color: $web-blue;
-        border-bottom: 1px solid $web-sky-blue;
-        padding: 0.452em 40px 0.452em 0;
-        display: block;
+        border-bottom: none;
         cursor: pointer;
-        line-height: 1.618em;
-        margin-bottom: 0.618em;
-        margin-top: 0;
-        position: relative;    
-        &:after {
-            font-family: FontAwesome;
-            color: #005596;
-            content: "\f078";
-            font-size: 0.732em;
-            position: absolute;
-            right: 7px;
-        }
-        &.open {
-           &:after { 
-               content: "\f077";
-           }
-        }
     }
 }
 .accordion-content {
@@ -563,6 +566,7 @@ ul.tabs {
     @include clearfix;
     padding-bottom: 1em;
     margin-bottom: 2em;
+    width: 100%;
     .details {
         float: left;
         width: 20%;
@@ -585,6 +589,9 @@ ul.tabs {
     padding: 20px;
     box-shadow: 0 1px 3px 0 #d4d4d5,0 0 0 1px #d4d4d5;
 }
+.side-bar .alert {
+    margin: 0 auto 2em auto;
+} 
 
 /*
  * comparison
@@ -597,5 +604,22 @@ ul.tabs {
     > div {
         border-left: 2px solid #E3F3FF;
         padding-left: 10px;
+    }
+}
+
+/*
+ * course page call to action buttons
+ */
+.article .course-ctas {
+    display: flex;
+    @include breakpoint(medium-up) {
+        display: none;
+    }
+}
+.side-bar .course-ctas {
+    display: none;
+    @include breakpoint(medium-up) {
+        display: block;
+        display: flex;
     }
 }

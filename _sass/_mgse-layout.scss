@@ -19,7 +19,7 @@ body {
 .main-content-wrapper {
     max-width: $max-width;
     margin: 0 auto;
-    padding: 1em;
+    padding: 1em 1em 3em 1em;
     background: #fff;
 }
 @include breakpoint (medium-up) {
