@@ -16,10 +16,13 @@ body {
 .mgse.home .hero-img {
     display: none;
 }
-.main-content-wrapper {
+.main-content-wrapper,
+.content-wrapper {
     max-width: $max-width;
     margin: 0 auto;
     padding: 1em 1em 3em 1em;
+}
+.main-content-wrapper {
     background: #fff;
 }
 @include breakpoint (medium-up) {
@@ -71,8 +74,8 @@ $grid-columns: 8;
     /*
      * Style A - Two 5-3 of 8 column layout
      */
-    article,
-    .article {
+    &> article,
+    &>.article {
         margin-bottom: 3em;
         @include breakpoint(medium-up) {
             @include span-columns(4);
@@ -81,7 +84,7 @@ $grid-columns: 8;
             @include span-columns(5);
         }
     }
-    .side-bar {
+    &> .side-bar {
         margin-bottom: 3em;
         @include breakpoint(medium-up) {
             clear: none;
@@ -137,7 +140,8 @@ $grid-columns: 8;
     .col-4max {
         @include clearfix;
     }
-    .col-4max > div {
+    .col-4max > div,
+    .col-4max > article {
         margin-bottom: 3em;
         @include breakpoint(medium-up) {
             @include span-columns(4);

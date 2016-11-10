@@ -148,6 +148,13 @@ a:hover {
     border-bottom: none;
     color: $web-10-blue;
 }
+a.pointer {
+    border-bottom: none;
+    &:after {
+        padding-left: .625rem;
+        content: '\2192';
+    }
+}
 
 /* other */
 abbr[title], dfn[title] {
