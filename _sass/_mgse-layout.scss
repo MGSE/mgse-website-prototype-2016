@@ -169,6 +169,21 @@ $grid-columns: 8;
     }
     
     /*
+     * swipe
+     */
+    .swipe {
+        @include outer-container();
+        overflow-x: scroll;
+        .col-4 {
+            width: 1218px;
+            > div, > article {
+                @include span-columns(3 of 12);
+                @include omega(4n);
+            } 
+        }
+    }
+    
+    /*
      * This is here in case required for special reasons
      */
     hr.row-break {
