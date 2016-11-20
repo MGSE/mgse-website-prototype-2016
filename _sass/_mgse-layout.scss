@@ -172,9 +172,9 @@ $grid-columns: 8;
      * swipe
      */
     .swipe {
-        @include outer-container();
         overflow-x: scroll;
         .col-4 {
+            @include outer-container();
             width: 1218px;
             > div, > article {
                 @include span-columns(3 of 12);
