@@ -7,5 +7,5 @@ heroImage:  http://education.unimelb.edu.au/__data/assets/image/0019/1862011/def
 ---
 
 {% for p in site.pages %}
-    <p><a href="{{ p.url }}">{{ p.title }}</a></p>
+    <p><a href="{{ p.url }}">{{ p.title }}</a> - {{ p.url }}</p>
 {% endfor %}

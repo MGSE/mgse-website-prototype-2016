@@ -16,7 +16,11 @@
     background-size: cover;
     max-height: 325px;
     .content-wrapper {
-        padding: 5em;
+        padding: 20/16*1em;
+        padding: 5vw;
+        @media only screen and (min-width: 1250px) {
+            padding: 5em;
+        }
     }
     blockquote {
         @include outer-container;
@@ -27,8 +31,8 @@
             @include shift(1);
         }
         p {
-            font-size: 48/16*1em;
-            font-size: 4vw;
+            font-size: 1.2em;
+            font-size: 5vw;
             font-weight: 400;
             line-height: 1.2;
             text-align: center;
