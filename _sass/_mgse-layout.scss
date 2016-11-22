@@ -154,6 +154,46 @@ $grid-columns: 8;
         }
     }
     
+    .col-4max-cards {
+        @include clearfix;
+        margin-bottom: 2em;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .card {
+            font-size: 80%;
+            height: 350/16*1em;
+            margin-bottom: 1em;
+            @include span-columns(4);
+            @include omega(2n);
+            .preview {
+                display: none;
+            }
+            &.news, &.event {
+                &:after {
+                    display: none;
+                }
+            }
+            @media only screen and (min-width: 580px) {
+                font-size: 100%;
+                height: 400/16*1em;
+                .preview {
+                    display: block;
+                }
+                &.news, &.event {
+                &:after {
+                        display: block;
+                    }
+                }
+            }
+            @media only screen and (min-width: 1000px) {
+                @include omega-reset(2n);
+                @include span-columns(3 of 12);
+                @include omega(4n);
+            }
+        }
+    }
+    
     /*
      * Special 1/2 layout - stacked in mobile, two colum in tablet and up
      */

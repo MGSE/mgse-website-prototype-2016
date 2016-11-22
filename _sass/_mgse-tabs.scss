@@ -1,0 +1,64 @@
+/*
+ * Tabs
+ */
+ul.tabs {
+    border-bottom: 2px solid $web-10-blue;
+    @include clearfix;
+    margin-bottom: 0;
+    margin-top: 3em;
+    li {
+        display: inline-block;
+        float: left;
+        background-image: none;
+        padding: 0;
+        margin: 0;
+        a {
+            display: block;
+            color: $web-blue;
+            font-size: 90%;
+            padding: 0.618em 2em;
+            border-bottom: none;
+            border-right: 1px solid #fff;
+            border-top: 2px solid #fff;
+            background: $web-sky-blue;
+            &:hover {
+                background: $web-20-blue;
+            }
+            &.current {
+                color: #fff;
+                background: $web-10-blue;
+                border-right: 1px solid $web-blue;
+                border-top: 2px solid $web-10-blue;
+                margin-right: 1px;
+            }
+        }
+    }
+    &.page {
+        li {
+            a {
+               &.current {
+                    background: #fff;
+                    color: $web-blue;
+                   border-left: 2px solid $web-blue;
+                   border-right: 2px solid $web-blue;
+                   border-bottom: 2px solid #fff;
+                   margin-bottom: -2px;
+                }
+            }
+        }
+    }
+}
+.panes {
+    padding-top: 1em;
+    &.enclosed {
+        border: 1px solid #eee;
+        padding: 1em $gutter;
+    }
+    margin-bottom: 4em;
+    > div {
+        display: none;
+        &.current {
+            display: block;
+        }
+    }
+}

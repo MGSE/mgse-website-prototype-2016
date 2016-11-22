@@ -1,0 +1,10 @@
+/*
+ * Read more
+ */
+.read-more {
+    margin-left: 20px;
+    &:before {
+        content: "\2026";
+        margin-right: 2px;
+    }
+}

@@ -1,0 +1,21 @@
+/*
+ * scholarship summary - asset display format
+ */
+.scholarship-summary {
+    @include clearfix;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1em;
+    margin-bottom: 2em;
+    .details {
+        float: left;
+        width: 20%;
+        padding-right: $gutter/2;
+        b {
+            color: #6a6a6a;
+            font-weight: normal;
+        }
+    }
+    .description {
+        margin-left: 20%;
+    }
+}

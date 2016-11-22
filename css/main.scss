@@ -108,8 +108,20 @@ textarea {
 @import "mgse-layout";
 @import "mgse-navigation";
 @import "mgse-typography";
-@import "mgse-components";
+/* === COMPONENTS === */
+@import "mgse-buttons";
+@import "mgse-tables";
+@import "mgse-figures";
+@import "mgse-video";
+@import "mgse-tabs";
+@import "mgse-accordion";
+@import "mgse-readmore";
+@import "mgse-profile";
+@import "mgse-scholarship-summary";
+@import "mgse-alert";
+@import "mgse-comparison";
 @import "mgse-events";
+@import "mgse-card";
 @import "carousel";
 @import "sub-site";
 @import "courses";

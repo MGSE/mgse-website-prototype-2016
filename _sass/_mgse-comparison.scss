@@ -1,0 +1,13 @@
+/*
+ * comparison
+ */
+.comparison {
+    @include breakpoint(medium-up) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    > div {
+        border-left: 2px solid #E3F3FF;
+        padding-left: 10px;
+    }
+}

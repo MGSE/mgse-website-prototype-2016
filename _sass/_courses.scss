@@ -183,3 +183,19 @@
         }
     }
 }
+/*
+ * course page call to action buttons
+ */
+.article .course-ctas {
+    display: flex;
+    @include breakpoint(medium-up) {
+        display: none;
+    }
+}
+.side-bar .course-ctas {
+    display: none;
+    @include breakpoint(medium-up) {
+        display: block;
+        display: flex;
+    }
+}

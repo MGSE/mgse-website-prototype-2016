@@ -1,0 +1,74 @@
+/*
+ * Figures
+ */
+figure {
+    margin: 0 0 1em 0;
+    img {
+        max-width: 100%;
+    }
+    &.video {
+        width: 100%;
+        max-width: 588px;
+    }
+    &.centered {
+        margin: 0 auto;
+    }
+    &.extra-vspace {
+        margin-top: 4em;
+        margin-bottom: 4em;
+    }
+}
+.article figure {
+    @include breakpoint(medium-up) {
+        &.left, &.right {
+            @include span-columns(2 of 4);
+        }
+        &.right {
+            float: right;
+            @include omega();
+            margin-left: $gutter;
+        }
+    }
+    @include breakpoint(medium-only-portrait-up) {
+        &.left, &.right {
+            @include span-columns(2 of 5);
+        }
+        &.right {
+            float: right;
+            @include omega();
+            margin-left: $gutter;
+        }
+    }
+}
+.side-bar figure {
+    @include fill-parent;
+    &.left, &.right {
+        width: auto;
+    }
+    &.left {
+        float: left;
+        margin-right: $gutter;
+    }
+    &.right {
+        float: right;
+        @include omega();
+        margin-left: $gutter;
+    }
+}
+.col-1of2 figure,
+.col-2of2 figure {
+    &.left, &.right {
+        @include span-columns(2 of 4);
+    }
+    &.right {
+        float: right;
+        @include omega();
+        margin-left: $gutter;
+    }
+}
+figcaption {
+    width: auto;
+    font-size: 0.732em;
+    padding: 5px;
+    margin-bottom: 1em;
+}

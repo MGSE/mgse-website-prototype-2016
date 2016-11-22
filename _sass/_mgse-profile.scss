@@ -1,0 +1,56 @@
+/*
+ * Profile
+ */
+.profile {
+    @include clearfix;
+    margin-bottom: 4em;
+    figure {
+        float: left;
+        width: 25%;
+        max-width: 150px;
+        margin-right: $gutter/2;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .details {
+        overflow: hidden; /* stops wrap under figure */
+        .info {
+            margin-bottom: 0.5em;
+            span, a {
+                font-size: 0.732em;
+                display: inline-block;
+                color: $web-10-blue;
+                margin-right: 5px;
+            }
+            a {
+                border-bottom: 0;
+                &:hover {
+                    border-bottom: 1px solid $web-10-blue;
+                }
+            }
+            .tel {
+                &:before {
+                    font-family: FontAwesome;
+                    content: "\f095";
+                    margin-right: 2px;
+                }
+            }
+            .email {
+                &:before {
+                    font-family: FontAwesome;
+                    content: "\f0e0";
+                    margin-right: 3px;
+                }
+            }
+            .twitter {
+                &:before {
+                    font-family: FontAwesome;
+                    content: "\f099";
+                    margin-right: 3px;
+                }
+            }
+        }
+    }
+}

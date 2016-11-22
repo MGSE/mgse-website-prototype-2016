@@ -1,0 +1,60 @@
+/*
+ * Buttons
+ */
+.button {
+    background: $web-blue;
+    border-bottom: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    transition: all 200ms linear;
+    display: inline-block;
+    padding: 8px 14px 8px;
+    margin: 5px 5px 1em 0;
+    border: 0;
+    vertical-align: middle;
+    &:hover, &:focus {
+        color: #fff;
+        background: $web-10-blue;
+        box-shadow: none; 
+        text-shadow: none;
+        border-bottom: none;
+    }
+    &:visited {
+        color: #fff;
+        border: 0;
+    }
+    &:active {
+        background: $web-20-blue;
+    }
+}
+
+.button-go,
+.button--go {
+    @extend .button; 
+
+    &:after {
+        font-family: FontAwesome;
+        font-size: 1em;
+        font-weight: bold;
+        margin: 0 0 0 12px;
+        line-height: .5;
+        color: #fff;
+        content: "\f105";
+        text-shadow: none;
+    }
+}
+.download.button:before {
+    font-family: FontAwesome;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0 12px 0 0;
+    line-height: .5;
+    color: #fff;
+    content: "\f019";
+    text-shadow: none;
+}
