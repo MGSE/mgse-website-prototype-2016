@@ -152,24 +152,27 @@
         display: flex;
         justify-content: center;
         flex-direction: column;
+        background: rgba(0,0,0,0.6);
     }
     .card-main {
         margin: $gutter;
-        text-align: center;
         h3, h4, h5, h6, p, a {
         color: #fff;
         }
         h3 {
-            font-size: 60/16*1em;
+            font-size: 10vw;
             margin-bottom: 10px;
             line-height: 1;
+            @media only screen and (min-width: 560/16*1em) {
+                font-size: 56/16*1em;
+            }
         }
         p {
             font-size: 24/16*1em;
             line-height: 1.2;
         }
-        &.left-align {
-            text-align: left;
+        &.centered {
+            text-align: ceneter;
         }
     }
 }
@@ -196,11 +199,12 @@
             }
             a {
                 height: 100%;
+                display: block;
                 display: flex;
                 justify-content: center;
                 flex-direction: column;
                 border: none;
-                padding: 0 1em;
+                padding: 0.5em 1em 0 1em;
                 &:hover {
                     background: $web-sky-blue;
                 }

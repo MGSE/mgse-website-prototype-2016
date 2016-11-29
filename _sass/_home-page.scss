@@ -221,6 +221,9 @@
 #main-content .home-in-page-nav {
     @include breakpoint(medium-only-portrait-up) {
         @include span-columns(9 of 12);
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
     }
     h3 {
         border-bottom: 2px solid #2D71B3;
@@ -235,6 +238,23 @@
             border-bottom: 1px solid #0072c9;
         }
     }
+    .accordion-label,
+    .accordion-content {
+        max-width: 100%;
+    }
+    .accordion-label {
+        text-align: center;
+        transform: translateX(1em);
+        &:after {
+            position: relative;
+            padding-left: 1em;
+        }
+        border-bottom: none;
+        font-weight: 400;
+    }
+}
+#main-content .home-in-page-nav:last-child {
+    margin-right: auto;
 }
 #main-content .home-side-bar {
     @include breakpoint(medium-only-portrait-up) {
