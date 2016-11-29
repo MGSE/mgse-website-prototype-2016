@@ -19,7 +19,7 @@
         height: 7rem;
         background: linear-gradient(0deg,#fff 50%,hsla(0,0%,100%,0));
     }
-    a {
+    > a {
         position: absolute;
         top: 0;
         left: 0;
@@ -31,15 +31,31 @@
                 color: $web-10-blue;
             }
         }
-    }
-    header {
-        img {
-            max-height: inherit;
-            width: 100%;
-            position: absolute;
-            overflow: hidden;
+        > header {
+            img {
+                max-height: inherit;
+                width: 100%;
+                position: absolute;
+                overflow: hidden;
+            }
         }
-    }
+        > footer {
+            background: #fff;
+            color: #444;
+            position: absolute;
+            z-index: 1;
+            bottom: 0;
+            width: 100%;
+            text-align: right;
+            padding: 0 $gutter/2 $gutter/2 $gutter/2;
+            p {
+                font-size: 12/16*1em;
+                margin: 0;
+                padding: 1em 0 0 0;
+                border-top: 1px solid $text-color;
+            }
+        }
+    }  
     .card-main {
         color: #444;
         margin: $gutter/2;
@@ -52,22 +68,6 @@
     }
     p {
         font-size: 0.9 * 1em;
-    }
-    footer {
-        background: #fff;
-        color: #444;
-        position: absolute;
-        z-index: 1;
-        bottom: 0;
-        width: 100%;
-        text-align: right;
-        padding: 0 $gutter/2 $gutter/2 $gutter/2;
-        p {
-            font-size: 12/16*1em;
-            margin: 0;
-            padding: 1em 0 0 0;
-            border-top: 1px solid $text-color;
-        }
     }
     &.highlight {
         background: $web-sky-blue;
@@ -128,24 +128,48 @@
         bottom: 0;
         right: 0;
     }
+    &.testimonial {
+        background-color: $web-sky-blue;
+        &:after {
+            display: none;
+        }
+        blockquote {
+            margin: 0 1.5em;
+        }
+        cite {
+            color: $text-color;
+            span {
+                border-bottom: 1px solid $web-10-blue;
+                color: $web-blue;
+            }
+        }
+    }
 }
 .double.promotion.card {
     background-repeat: no-repeat;
     background-size: cover;
+    a {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
     .card-main {
-        position: absolute;
-        width:100%;
-        top: 50%;
-        transform: translateY(-50%);
+        margin: $gutter;
         text-align: center;
         h3, h4, h5, h6, p, a {
         color: #fff;
         }
         h3 {
             font-size: 60/16*1em;
+            margin-bottom: 10px;
+            line-height: 1;
         }
         p {
-            font-size: 28/16*1em;
+            font-size: 24/16*1em;
+            line-height: 1.2;
+        }
+        &.left-align {
+            text-align: left;
         }
     }
 }
