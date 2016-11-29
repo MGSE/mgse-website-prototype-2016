@@ -1,0 +1,10 @@
+/*
+ * Wells
+ */
+.well,
+.block {
+    background: $web-sky-blue;
+    padding: 1em;
+    margin-bottom: 2em;
+    @include clearfix;
+}

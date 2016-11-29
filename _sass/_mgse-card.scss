@@ -8,7 +8,6 @@
     margin-bottom: 2em;
     background-color: #fff;
     height: 400/16*1em;
-    max-width: 320px;
     overflow: hidden;
     &:after {
         position: absolute;
@@ -81,8 +80,122 @@
         
     }
 }
+/*
+ * promotion card - home page promotions
+ */
+.promotion.card {
+    height: 340/16 * 1em;
+    header {
+        background-color: #f1f1f1;
+        position: relative;
+        padding-bottom: 1/2*100%;
+        &:before {
+            content: "";
+            font-size: 2em;
+            line-height: 1;
+            letter-spacing: -1px;
+            color: #D6D6D6;
+            display: block;
+            height: 1em;
+            position: absolute;
+            top: 0;
+            right:0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            text-align: center;
+        }
+    }
+    .cta {
+        margin: 0;
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        bottom: 1em;
+        text-align: right;
+        padding-right: 1em;
+        color: #fff;
+    }
+    &:after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        border-top: 76px solid transparent;
+        border-bottom: 0px solid transparent;
+        border-right: 280px solid rgba(1,68,126,0.8);
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}
+.double.promotion.card {
+    background-repeat: no-repeat;
+    background-size: cover;
+    .card-main {
+        position: absolute;
+        width:100%;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+        h3, h4, h5, h6, p, a {
+        color: #fff;
+        }
+        h3 {
+            font-size: 60/16*1em;
+        }
+        p {
+            font-size: 28/16*1em;
+        }
+    }
+}
+/*
+ * promotion links
+ */
+.promotion-links {
+    box-shadow: 0 1px 3px 0 #d4d4d5,0 0 0 1px #d4d4d5;
+    margin-bottom: 2em;
+    ul {
+        height: 100%;
+        margin: 0;
+        li {
+            height: 340/4/16*1em;
+            font-weight: 500;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            background-image: none;
+            
+            border-bottom: 1px solid #d4d4d5;
+            &:last-child {
+                border-bottom: none;
+            }
+            a {
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                border: none;
+                padding: 0 1em;
+                &:hover {
+                    background: $web-sky-blue;
+                }
+                span {
+                    &:after {
+                        padding-left: .625rem;
+                        content: '\2192';
+                    }
+                }
+            }
+        }
+    }
+}
+/*
+ * news and event cards
+ */
 .news.card,
-.event.card {   
+.event.card {
+    max-width: 320px;
     footer {
         text-align: left;
         p {
@@ -145,7 +258,11 @@
         }
     }
 }
+/*
+ * project cards
+ */
 .project.card {
+    max-width: 320px;
     header {
         background-color: #f1f1f1;
         position: relative;

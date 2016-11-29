@@ -14,14 +14,3 @@
 	width: 100%;
 	height: 100%;
 }
-
-/*
- * Wells
- */
-.well,
-.block {
-    background: $web-sky-blue;
-    padding: 1em;
-    margin-bottom: 2em;
-    @include clearfix;
-}

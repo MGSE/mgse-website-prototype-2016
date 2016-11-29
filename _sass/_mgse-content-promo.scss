@@ -1,0 +1,29 @@
+/*
+ * Content promo
+ */
+.promo {
+    background: #E3F3FF;
+    padding: 1em;
+    margin-bottom: 2em;
+}
+.promo::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+.promo h2 {
+    margin-bottom: 0;
+}
+@media only screen and (min-width: 40.0625em) {
+    .promo figure {
+        margin-bottom: 0;
+    }
+}
+.promo a.button,
+.promo a.button-go,
+.promo a.button--go {
+    margin: 0;
+}
+.promo.alt {
+    background: #c4c4c5;
+}
