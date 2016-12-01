@@ -98,7 +98,7 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-@import "bourbon", "neat";
+@import "bourbon/bourbon", "neat/neat";
 @import "global-header-footer-fix";
 @import "settings";
 @import "mgse-base";
