@@ -6,6 +6,6 @@ bodyClass:
 heroImage:  http://education.unimelb.edu.au/__data/assets/image/0019/1862011/default-hero-image.jpg
 ---
 
-{% for p in site.pages %}
+{% for p in site.html_pages %}
     <p><a href="{{ p.url }}">{{ p.title }}</a> - {{ p.url }}</p>
 {% endfor %}
