@@ -177,6 +177,30 @@
         }
     }
 }
+.double.promotion.flat {
+    position: relative;
+    margin-bottom: 2em;
+    padding: $gutter;
+    .text, figure {
+        width: 50%;
+        float: left;
+    }
+    h3 {
+        font-size: 9vw;
+        font-weight: 300;
+        margin-bottom: 20px;
+        line-height: 1;
+        @media only screen and (min-width: 560/16*1em) {
+            font-size: 48/16*1em;
+        }
+    }
+    p.copy {
+        font-size: 18/16*1em;
+    }
+    img {
+        width: 100%;
+    }
+}
 /*
  * promotion links
  */
