@@ -14,7 +14,6 @@
 .hero {
     background: url('/img/home-hero.jpg') no-repeat center;
     background-size: cover;
-    max-height: 325px;
     .content-wrapper {
         padding: 20/16*1em;
         padding: 20vw 5vw;
@@ -23,9 +22,11 @@
         }
         @media only screen and (min-width: 1250px) {
             padding: 5em;
+            min-height: 325px;
         }
     }
     blockquote {
+        display: none;
         @include outer-container;
         margin: 0;
         p,
@@ -34,8 +35,7 @@
             @include shift(1);
         }
         p {
-            font-size: 1.2em;
-            font-size: 5vw;
+            font-size: 24/16*1em;
             font-weight: 100;
             line-height: 1.2;
             text-align: center;
@@ -45,6 +45,9 @@
             &:after {
                 content: "";
             }
+            @media only screen and (min-width: 480px) {
+                font-size: 5vw;
+            }
             @media only screen and (min-width: 1250px) {
                 font-size: 48/16*1em;
             }
@@ -53,15 +56,18 @@
             text-align: right;
             padding-top: 1em;
             cite {
-                font-size: 24/16*1em;
-                font-size: 2vw;
+                font-size: 18/16*1em;
+                font-size: 4vw;
                 font-weight: 100;
                 color: #fff;
                 &:before {
                     content: "\2014";
                     margin-right: 0.5em;
                 }
-                @media only screen and (min-width: 1250px) {
+                @media only screen and (min-width: 600px) {
+                    font-size: 3vw;
+                }
+                @media only screen and (min-width: 768px) {
                     font-size: 24/16*1em;
                 }
             }
