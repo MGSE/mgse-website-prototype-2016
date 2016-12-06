@@ -4,7 +4,7 @@
     button {
         border: none;
         background: none;
-        color: $mgse-grey;
+        color: $mgse-blue;
         &.prev {
             float: left;
         }
@@ -31,7 +31,7 @@
             background: $web-sky-blue;
             margin: 0 3px;
             &.current {
-                background: $mgse-grey;
+                background: $mgse-blue;
             }
         }
     }
