@@ -31,7 +31,7 @@
     float: left; 
     display: inline; 
     margin: 0.8em 0.4em; 
-    font-weight: normal; 
+    font-weight: 400; 
     font-size: 0.8em; color: #999999; 
 } 
 #main-content .filters-nav__list dt a, 
@@ -57,7 +57,7 @@
 #main-content .filters-nav__list li a.active { 
     -webkit-border-radius: 3px; 
     border-radius: 3px; 
-    font-weight: normal; 
+    font-weight: 400; 
     background: #005596; 
     padding: 0.4em; 
     cursor: default; 
@@ -74,7 +74,7 @@
     border: 0; 
     color: #ddd; 
     font-size: 16px; 
-    font-weight: 300; 
+    font-weight: 400; 
     border-radius: 4px; 
     cursor: pointer; 
 } 

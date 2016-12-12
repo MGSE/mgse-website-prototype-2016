@@ -7,7 +7,7 @@
 }
 .courses .filter legend {
     display: inline;
-    font-weight: 600;
+    font-weight: 700;
 }
 .courses .filter legend,
 .courses .filter label {
@@ -80,7 +80,7 @@
     display: block;
     float: left;
     font-size: 1.1em;
-    font-weight: bold;
+    font-weight: 700;
     margin: 0;
 }
 .course-list a {
@@ -104,7 +104,7 @@
     display: block;
 }
 .course-list small {
-    font-weight: normal;
+    font-weight: 400;
     font-size: 0.7em;
 }
 .course-list span {
@@ -170,7 +170,7 @@
     span {
         border-bottom: 10px solid #C4C4C5;
         margin-right: 20px;
-        font-weight: bold;
+        font-weight: 700;
         display: inline-block;
         &.masters {
             border-bottom: 10px solid #009DDC;
