@@ -176,7 +176,7 @@
  * layout container for news and project cards
  */
 .col-4max-cards {
-    @include clearfix;
+    @include outer-container;
     margin-bottom: 2em;
     display: flex;
     flex-wrap: wrap;
