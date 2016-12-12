@@ -12,9 +12,9 @@ $(document).ready(function () {
      *  home hero quote random selector
      */
     var numQuotes = $('.mgse.home .hero blockquote').length;
-    console.log(numQuotes);
+    //console.log(numQuotes);
     var randomQuote = getRandomInt(0, numQuotes);
-    console.log(randomQuote);
+    //console.log(randomQuote);
     $('.mgse.home .hero blockquote:eq('+randomQuote+')').show();
     
 
