@@ -144,7 +144,6 @@
     display: flex;
     flex-wrap: wrap;
     @include outer-container;
-    padding: 0 1em 0 1em;/*new*/
     .card,
     .promotion-links {
         width: 100%;
@@ -173,6 +172,9 @@
             @include span-columns(6 of 12);
         }
     }
+}
+.home .promos {
+    padding: 0 1em 0 1em;
 }
 /*
  * layout container for news and project cards
