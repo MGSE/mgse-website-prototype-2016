@@ -7,9 +7,23 @@
         color: $mgse-blue;
         &.prev {
             float: left;
+            &:before {
+                font-family: FontAwesome;
+                font-size: 1em;
+                margin: 0 12px 0 0;
+                line-height: .5;
+                content: "\f104";
+            }
         }
         &.next {
             float: right;
+            &:after {
+                font-family: FontAwesome;
+                font-size: 1em;
+                margin: 0 0 0 12px;
+                line-height: .5;
+                content: "\f105";
+            }
         }
         &.hide {
             display: none;
