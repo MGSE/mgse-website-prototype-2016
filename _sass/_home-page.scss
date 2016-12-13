@@ -179,7 +179,6 @@
  */
 .col-4max-cards {
     @include outer-container;
-    padding: 0 1em 0 1em;
     margin-bottom: 2em;
     display: flex;
     flex-wrap: wrap;
@@ -216,6 +215,9 @@
             @include omega(4n);
         }
     }
+}
+.home .col-4max-cards {
+    padding: 0 1em 0 1em;
 }
 .card-slider {
 	width: 100%;
