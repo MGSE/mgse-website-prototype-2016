@@ -284,8 +284,10 @@ function insertSets(cardSliderClass)
 			}
 			/*count how many we created*/
 			numOfSets = $(container+" "+cardSetClass).length;
+            console.log(numOfSets);
 			/*create the navigation "dots"*/
-			for(var j = 0; j <= numOfSets; j+=numOfSets) {
+			//for(var j = 0; j <= numOfSets; j+=numOfSets) {  /** ALBERT **/
+            for(var j = 0; j < numOfSets; j+=1) {
 				$(".pager").append("<li>"+j+"</li>");
 			}
 			/*add ".current" to 1st nav item*/
