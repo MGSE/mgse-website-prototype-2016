@@ -264,6 +264,7 @@
         background-color: #f1f1f1;
         position: relative;
         padding-bottom: 2/3*100%;
+        overflow: hidden;
         &:before {
             content: "NEWS";
             font-size: 2em;
@@ -320,6 +321,7 @@
         background-color: #f1f1f1;
         position: relative;
         padding-bottom: 1/2*100%;
+        overflow: hidden;
         &:before {
             content: "PROJECT";
             font-size: 2em;
