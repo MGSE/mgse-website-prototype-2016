@@ -1,4 +1,11 @@
 .slider-controls {
+    display: none;
+}
+.csstransitions .slider-controls {
+    /* use modernizr to see if css transitions are supported, 
+     * if yes then JavaScript is on and browser supports transistions, so show controls
+     */
+    display: block;
     @include outer-container;
     text-align: center;
     button {

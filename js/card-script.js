@@ -91,13 +91,14 @@ function nextCards(containerId)
 		nextCardSet = $(container+" "+cardSetClass+":nth-child("+nextSetNum+")");
 		/*calculate shift value*/
 		shiftValue = (containerOffsetX) - (nextCardSet.offset().left);
-		
+		$(container+" "+navRight).css("opacity",1);
 	} else if(nextSetNum >= numOfSets) 
 	{
 		/*at maximum, don't move a thing*/
 		nextSetNum = numOfSets;
 		nextCardSet = $(container+" "+cardSetClass+":last-child");
 		shiftValue = 0;
+		$(container+" "+navRight).css("opacity",0.4);
 	}
 	
 	/*make the shift*/
@@ -118,6 +119,7 @@ function prevCards(containerId)
 	/*set currentSet based off our known "current" value*/
 	currentSet = $(container+" "+cardSetClass+":nth-child("+currentSetNum+")");
 	
+	
 	/*not the first item*/
 	if(currentSetNum > 1)
 	{
@@ -131,7 +133,7 @@ function prevCards(containerId)
 		nextCardSet = $(container+" "+cardSetClass+":nth-child("+nextSetNum+")");
 		/*calculate how much we are shifting by*/
 		shiftValue = (containerOffsetX) - (nextCardSet.offset().left);
-		
+		$(container).siblings(".slider-controls").children(".prev").css("opacity",1);
 	} else if(currentSetNum <= 1) 
 	{
 		/*no move to be made as we're on the first - ensure values are reset to minimum*/
@@ -169,6 +171,15 @@ function shiftCards(containerId)
 		
 	});
 	
+	/*set transparency of navigation buttons */
+	if (currentSetNum === 1) {
+		$(container).siblings(".slider-controls").children(".prev").css("opacity",0.3);
+	} else if(currentSetNum === numOfSets){
+		$(container).siblings(".slider-controls").children(".next").css("opacity",0.3);
+	} else {
+		$(container).siblings(".slider-controls").children(".prev").css("opacity",1);
+		$(container).siblings(".slider-controls").children(".next").css("opacity",1);
+	}
 }
 
 function resizeAdjust()
@@ -215,6 +226,12 @@ function setSizes(cardSliderClass)
 		
 		/*set width of larger container*/
 		$(container).css("width",numOfSets+"00%");
+		
+		/*set transparency of navigation*/
+		$(container).siblings(".slider-controls").children(".prev").css("opacity",0.3);
+		if (numOfSets <= 1) {
+			$(container).siblings(".slider-controls").children(".next").css("opacity",0.3);
+		}
 		
 		/*as the container has a transition on load from 0% to 100%, ensure widths aren't set early
 		we do this by adding "disabled" and removing it once widths are set*/
@@ -274,7 +291,7 @@ function insertSets(cardSliderClass)
 		
 		if(numOfCards > 0)
 		{
-			/*function only ever run on document ready. Can set current to 1 */
+			/*function only ever runs on document ready. Can set current to 1 */
 			currentSet = 1;
 			
 			/*for each specified set, wrap in div of the cardSetClass*/
@@ -284,9 +301,8 @@ function insertSets(cardSliderClass)
 			}
 			/*count how many we created*/
 			numOfSets = $(container+" "+cardSetClass).length;
-            console.log(numOfSets);
+			
 			/*create the navigation "dots"*/
-			//for(var j = 0; j <= numOfSets; j+=numOfSets) {  /** ALBERT **/
             for(var j = 0; j < numOfSets; j+=1) {
 				$(".pager").append("<li>"+j+"</li>");
 			}
