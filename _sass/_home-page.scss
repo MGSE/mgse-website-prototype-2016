@@ -12,6 +12,11 @@
     }
 }
 .hero {
+    display: none;
+    @media only screen and (min-width: 600px) {
+        display: block;
+    }
+    
     background: url('/img/home-hero.jpg') no-repeat center;
     background-size: cover;
     .content-wrapper {
