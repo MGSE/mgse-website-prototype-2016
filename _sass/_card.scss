@@ -71,6 +71,7 @@
     }
     p {
         font-size: 0.9 * 1em;
+        max-width: 100%;
     }
     &.highlight {
         background: $web-sky-blue;
