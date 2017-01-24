@@ -130,6 +130,14 @@ p {
             font-size: 1.2em;
         }
     }
+    &.page-subtitle {
+        text-transform: uppercase;
+        font-style: italic;
+        font-size: 1em;
+        margin-top: -1em;
+        margin-bottom: 2em;
+        color: $web-blue;
+    }
 }
 /* inline tag styles */
 
