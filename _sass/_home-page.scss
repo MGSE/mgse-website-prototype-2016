@@ -252,6 +252,7 @@
  * Homepage nav
  */
 #main-content .home-in-page-nav {
+    padding: 0 1em;
     @include breakpoint(medium-only-portrait-up) {
         @include span-columns(9 of 12);
         float: none;
