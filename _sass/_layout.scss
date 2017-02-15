@@ -75,7 +75,8 @@ $grid-columns: 8;
      * Style A - Two 5-3 of 8 column layout
      */
     &> article,
-    &>.article {
+    &>.article,
+    .panes .article {
         margin-bottom: 3em;
         @include breakpoint(medium-up) {
             @include span-columns(4);
@@ -84,7 +85,8 @@ $grid-columns: 8;
             @include span-columns(5);
         }
     }
-    &> .side-bar {
+    &> .side-bar,
+    .panes .side-bar {
         margin-bottom: 3em;
         @include breakpoint(medium-up) {
             clear: none;
