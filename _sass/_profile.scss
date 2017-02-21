@@ -16,6 +16,15 @@
     }
     .details {
         overflow: hidden; /* stops wrap under figure */
+        .profile-name {
+            font-size: 1.08em;
+            font-weight: 700;
+            line-height: 1.618;
+            margin-bottom: 0.236em;
+            @include breakpoint (medium-up) {
+                font-size: 1.2em;
+            }
+        }
         .info {
             margin-bottom: 0.5em;
             span, a {
