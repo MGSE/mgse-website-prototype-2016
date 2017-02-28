@@ -1,0 +1,75 @@
+/*
+ * fees info
+ */
+.fees-info {
+    ul.tabs {
+        margin-top: 1em;
+        li {
+            display: block;
+            width: 25%;
+            a {
+                min-height: 75px;
+                font-size: 12/16*1em;
+                font-weight: 700;
+                padding: 0.618em 5%;
+                border-top: none;
+                background: #b7d1ed;
+                &.current {
+                    background: $web-10-blue;
+                }
+            }
+            &:last-child {
+                a {
+                    border-right: none;
+                }
+            }
+        }
+    }
+    .panes {
+        background: #fff;
+        padding-bottom: 1em;
+        margin-bottom: 1em;
+        .explanation {
+            padding: 0 1em;
+        }
+        p {
+            font-size: 14/16*1em;
+        }
+        table {
+            width: 100%;
+            margin-bottom: 0;
+            th, td {
+                width: 30%;
+                text-align: center;
+            }
+            th {
+                font-size: 12/16*1em;
+                font-weight: 700;
+                color: $web-blue;
+            }
+            thead {
+                tr, th, td {
+                    border: none;
+                }
+            }
+            tbody {
+                th, td {
+                    border: none;
+                }
+                tr {
+                    border-left: none;
+                    border-right: none;
+                }
+                tr:nth-child(2n+1) {
+                    background: none;
+                }
+                th {
+                    text-align: left;
+                }
+                td {
+                    font-size: 18/16*1em;
+                }
+            }
+        }
+    }
+}

@@ -30,6 +30,16 @@
         border-bottom: none;
         cursor: pointer;
     }
+    &.compact {
+        border-bottom: none;
+        a {
+            border-bottom: 1px solid $web-blue;
+        }
+        &:after {
+            position: relative;
+            margin-left: 1em;
+        } 
+    }
 }
 .accordion-content {
     max-width: 745px;
