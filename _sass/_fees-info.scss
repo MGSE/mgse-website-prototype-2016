@@ -3,12 +3,14 @@
  */
 .fees-info {
     ul.tabs {
+        display: flex;
         margin-top: 1em;
         li {
             display: block;
             width: 25%;
             a {
                 min-height: 75px;
+                height: 100%;
                 font-size: 12/16*1em;
                 font-weight: 700;
                 padding: 0.618em 5%;
