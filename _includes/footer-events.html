@@ -31,8 +31,11 @@
         <!-- mixitup -->
         <script src="/js/mixitup.min.js"></script>
         <script type="text/javascript">
-        $(document).ready(function() {
-           /* var allEvents = $('#container');
+            $(document).ready(function(){
+                $('#nextDLS').replaceWith($('#container article.dls:first').clone());
+            });
+        /*$(document).ready(function() {
+            var allEvents = $('#container');
             console.log(allEvents);
             $('.filter').click(function(event){
                 event.preventDefault();
@@ -93,8 +96,8 @@
             $(".filter-menu li").click(function() {
                 currentItem = $(this).attr('class');
                 sortItems(currentItem);
-            });*/
-        });
+            });
+        });*/
         </script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. 
         <script>
