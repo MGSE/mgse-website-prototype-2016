@@ -58,8 +58,8 @@ $grid-columns: 8;
 // ------------------------------------------------------------
 // Omega Reset - http://www.joshfry.me/blog/2013/05/13/omega-reset-for-bourbon-neat
 // ------------------------------------------------------------
-@mixin omega-reset($nth) {
-  &:nth-child(#{$nth}) { margin-right: flex-gutter(); }
+@mixin omega-reset($nth, $maxcol:12) {
+  &:nth-child(#{$nth}) { margin-right: flex-gutter($maxcol); }
   &:nth-child(#{$nth}+1) { clear: none }
 }
 
@@ -123,15 +123,16 @@ $grid-columns: 8;
     .col-3max {
         @include clearfix;
     }
-    .col-3max > div {
+    .col-3max > div,
+    .col-3max > article {
         margin-bottom: 3em;
         @include breakpoint(medium-up) {
             @include span-columns(4);
             @include omega(2n);
         }
         @include breakpoint(medium-only-portrait-up) {
-            @include omega-reset(2n);
-            @include span-columns(4 of 12);
+            @include omega-reset(2n, 9);
+            @include span-columns(3 of 9);
             @include omega(3n);
         }
     }
@@ -179,4 +180,26 @@ $grid-columns: 8;
         border: none;
     }
     
+}
+
+/*
+ * Layout for events page
+ */
+.nine-three {
+    @include breakpoint(medium-up) {
+        .span3 {
+            @include span-columns(3 of 9);
+        }
+        .span9 {
+            @include span-columns(6 of 9);
+        }
+    }
+    @include breakpoint(medium-only-portrait-up) {
+        .span3 {
+            @include span-columns(3 of 12);
+        }
+        .span9 {
+            @include span-columns(9 of 12);
+        }
+    }
 }
