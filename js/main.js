@@ -512,3 +512,28 @@ $(document).ready(function() {
 });
 
 /* end Card slider */
+
+/* event filtering */
+$('.filter').click(function(){
+    var filter = $(this).attr('data-filter');
+    var margin = $('#container .event:first-child').css('marginRight');
+    $('#container > .event').css('margin-right' , '').css('clear','').fadeIn();
+    $('#container > .event').css('margin-right' , '').promise().done(function() {
+        if(filter != "all") {
+            $('#container > .event:not(.'+filter+')').fadeOut();
+            // when fade is complete fix wrap
+            $('#container > .event:not(.'+filter+')').promise().done(function() {
+                var n = 1;
+                $('#container > .event:visible').each(function(index) {
+                    $(this).append(index);
+                    if(index == 3*n-1) {
+                        $(this).css('margin-right' , '0').css('clear','none');
+                    } else {
+                        $(this).css('margin-right' , margin);
+                    }
+                });
+                n++;
+            });
+        }
+    });
+});
