@@ -149,6 +149,7 @@
     }
     &:hover {
         transform: scale(1.5);
+        transform-origin: left;
         height: auto;
         padding-top: 72px;
         z-index: 999;
@@ -157,6 +158,9 @@
         border: 0;
         img, p {
             display: block;
+        }
+        @media only screen and (min-width: 81.25em) {
+            transform-origin: center;
         }
     }
     transition: transform 0.5s ease-in;
