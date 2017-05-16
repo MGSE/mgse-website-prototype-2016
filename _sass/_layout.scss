@@ -25,7 +25,7 @@ body {
 .main-content-wrapper {
     background: #fff;
 }
-@include breakpoint (medium-up) {
+@media only screen and (min-width: px-to-em(641)) {
     .hero-img {
         position: absolute;
         z-index: -1;
@@ -41,7 +41,7 @@ body {
 }
 
 .footer-wrapper {
-    background: $web-blue;
+    background: #005596;
     margin-bottom: -40px;
     .footer {
         max-width: $max-width;
@@ -64,7 +64,7 @@ $grid-columns: 8;
 }
 
 #main-content {
-    @include breakpoint(medium-up) {
+    @media only screen and (min-width: px-to-em(641)) {
         @include outer-container;
         &>div {
             clear: left;
@@ -78,22 +78,22 @@ $grid-columns: 8;
     &>.article,
     .panes .article {
         margin-bottom: 3em;
-        @include breakpoint(medium-up) {
+        @media only screen and (min-width: px-to-em(641)) {
             @include span-columns(4);
         }
-        @include breakpoint(medium-only-portrait-up) {
+        @media only screen and (min-width: px-to-em(801)) {
             @include span-columns(5);
         }
     }
     &> .side-bar,
     .panes .side-bar {
         margin-bottom: 3em;
-        @include breakpoint(medium-up) {
+        @media only screen and (min-width: px-to-em(641)) {
             clear: none;
             @include span-columns(4);
             @include omega();
         }
-        @include breakpoint(medium-only-portrait-up) {
+        @media only screen and (min-width: px-to-em(801)) {
             @include span-columns(3);
             @include omega();
         }
@@ -104,13 +104,13 @@ $grid-columns: 8;
      */
     .col-1of2 {
         margin-bottom: 3em;
-        @include breakpoint(medium-up) {
+        @media only screen and (min-width: px-to-em(641)) {
             @include span-columns(4);
         }
     }
     .col-2of2 {
         margin-bottom: 3em;
-        @include breakpoint(medium-up) {
+        @media only screen and (min-width: px-to-em(641)) {
             clear: none;
             @include span-columns(4);
             @include omega();
@@ -126,11 +126,11 @@ $grid-columns: 8;
     .col-3max > div,
     .col-3max > article {
         margin-bottom: 3em;
-        @include breakpoint(medium-up) {
+        @media only screen and (min-width: px-to-em(641)) {
             @include span-columns(4);
             @include omega(2n);
         }
-        @include breakpoint(medium-only-portrait-up) {
+        @media only screen and (min-width: px-to-em(801)) {
             @include omega-reset(2n, 9);
             @include span-columns(3 of 9);
             @include omega(3n);
@@ -146,11 +146,11 @@ $grid-columns: 8;
     .col-4max > div,
     .col-4max > article {
         margin-bottom: 3em;
-        @include breakpoint(medium-up) {
+        @media only screen and (min-width: px-to-em(641)) {
             @include span-columns(4);
             @include omega(2n);
         }
-        @include breakpoint(medium-only-portrait-up) {
+        @media only screen and (min-width: px-to-em(801)) {
             @include omega-reset(2n);
             @include span-columns(3 of 12);
             @include omega(4n);
@@ -165,7 +165,7 @@ $grid-columns: 8;
     }
     .col-2max > div {
         margin-bottom: 3em;
-        @include breakpoint(medium-up) {
+        @media only screen and (min-width: px-to-em(641)) {
             @include span-columns(4);
             @include omega(2n);
         }
@@ -186,7 +186,7 @@ $grid-columns: 8;
  * Layout for events page
  */
 .nine-three {
-    @include breakpoint(medium-up) {
+    @media only screen and (min-width: px-to-em(641)) {
         .span3 {
             @include span-columns(3 of 9);
         }
@@ -194,7 +194,7 @@ $grid-columns: 8;
             @include span-columns(6 of 9);
         }
     }
-    @include breakpoint(medium-only-portrait-up) {
+    @media only screen and (min-width: px-to-em(801)) {
         .span3 {
             @include span-columns(3 of 12);
         }

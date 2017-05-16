@@ -7,7 +7,7 @@
         border-bottom: none;
     }
     span {
-        color: $mgse-blue;
+        color: #00447C;
         &.prev {
             float: left;
             &:before {
@@ -40,11 +40,11 @@
             background: none;
             margin: 0;
             padding: 0;
-            color: $web-sky-blue;
+            color: #E3F3FF;
             padding: 0 3px;
             border-radius: 3px;
             &.current {
-                background: $mgse-blue;
+                background: #00447C;
                 color: #fff;
             }
         }

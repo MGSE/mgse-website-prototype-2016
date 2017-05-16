@@ -17,7 +17,7 @@
                 border-top: none;
                 background: #b7d1ed;
                 &.current {
-                    background: $web-10-blue;
+                    background: #0072C9;
                 }
             }
             &:last-child {
@@ -47,7 +47,7 @@
             th {
                 font-size: 12/16*1em;
                 font-weight: 700;
-                color: $web-blue;
+                color: #005596;
             }
             thead {
                 tr, th, td {

@@ -16,7 +16,7 @@
  */
 .page-preview {
     h2 {
-        border-bottom: 2px solid $web-blue;
+        border-bottom: 2px solid #005596;
     }
 }
 .preview-img-wrap {
@@ -52,7 +52,7 @@
             font-size: 1em;
             line-height: 1;
             font-weight: 400;
-            background: $web-blue;
+            background: #005596;
             width: 100%;
             margin: 0;
             padding: 0.5em 0.618em;
@@ -65,7 +65,7 @@
  */
 .preview-vertical {
     .group-heading {
-        border-bottom: 2px solid $web-blue;
+        border-bottom: 2px solid #005596;
     }
     div {
         @include clearfix;

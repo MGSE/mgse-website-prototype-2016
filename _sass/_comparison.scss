@@ -2,7 +2,7 @@
  * comparison
  */
 .comparison {
-    @include breakpoint(medium-up) {
+    @media only screen and (min-width: px-to-em(641)) {
         display: flex;
         flex-wrap: wrap;
     }

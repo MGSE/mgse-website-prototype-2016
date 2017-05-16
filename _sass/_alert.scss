@@ -2,15 +2,14 @@
  * alert
  */
 .alert {
-    max-width: 700px;
-    margin: 8em auto;
-    text-align: center;
-    border: 1px solid #009DDC;
-    border-radius: 3px;
-    padding: 20px;
-    box-shadow: 0 1px 3px 0 #d4d4d5,0 0 0 1px #d4d4d5;
-}
+  max-width: 700px;
+  margin: 8em auto;
+  text-align: center;
+  border: 1px solid #009DDC;
+  border-radius: 3px;
+  padding: 20px;
+  box-shadow: 0 1px 3px 0 #d4d4d5,0 0 0 1px #d4d4d5; }
+
 .side-bar .alert,
 .side-bar.alert {
-    margin: 0 auto 2em auto;
-} 
+  margin: 0 auto 2em auto; }

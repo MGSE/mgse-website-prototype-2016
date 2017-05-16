@@ -16,12 +16,12 @@ table td {
 }
 
 table tr, table th, table td {
-    border: 1px solid lighten($web-blue, 60%);
+    border: 1px solid #c9e8ff;
     padding: 1em;
     }
 
 table tbody tr:nth-child(2n+1) {
-    background: lighten($web-blue, 65%);
+    background: #e3f3ff;
 }
 
 /*

@@ -1,10 +1,6 @@
 // === SASS SETTINGS === */
 
-// function to calculates the em-value from a px-value.
-// $context is optional, defaults to $basefont.
-@function px-to-em($target, $context: $basefont) {
-	@return ($target / $context) * 1em;
-}
+// === VARIABLES === */
 
 // set to the base font size preferably leave as 16.
 $basefont:16; //px
@@ -14,77 +10,33 @@ $max-width: 1250px;
 
 // colours */
 
-$web-blue: #005596;
-$web-10-blue: #0072C9; //10% lighten of $web-blue
-$web-20-blue: #008ffc; //20% lighten of $web-blue
-$web-50-blue: #96d2ff; //50% lighten of $web-blue
-$web-dark-blue: #00457C;
-$web-sky-blue: #E3F3FF;
-$web-grey: #4A4A4A;
+//$web-blue: #005596;
+//$web-10-blue: #0072C9; //10% lighten of $web-blue
+//$web-20-blue: #008ffc; //20% lighten of $web-blue
+//$web-50-blue: #96d2ff; //50% lighten of $web-blue
+//#c9e8ff 60% lighten of #005596
+//$web-dark-blue: #00457C;
+//$web-sky-blue: #E3F3FF;
+//$web-grey: #4A4A4A;
 
-$mgse-blue: #00447C;
-$mgse-grey: #C4C4C5;
-$mgse-black: #20201E;
+//$mgse-blue: #00447C; rgb(0, 68, 124)
+//$mgse-grey: #C4C4C5;
+//$mgse-black: #20201E;
 
-$text-color: #444444;
+//$text-color: #444444;
 
-$main-nav-hover: #0061af;
+//$main-nav-hover: #0061af;
 
-$mgse-dark-grey: #6a6a6a;
+//$mgse-dark-grey: #6a6a6a;
 
 // fonts */
 $body-font-family: 'Univers W01', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
 $body-font-bold: 'Univers W01', Helvetica, Arial, sans-serif;
 
-// media queries */
+// === MIXINS === */
 
-// Here we define the breakpoints which will become the upper border for each media size.
-// The function px-to-em() calculates the em-value from a px-value.
-$small-breakpoint:  px-to-em(640)  !default;
-$medium-portrait-breakpoint: px-to-em(800)  !default;
-$medium-breakpoint: px-to-em(1024) !default;
-$large-breakpoint:  px-to-em(1440) !default;
-$xlarge-breakpoint: px-to-em(1920) !default;
-
-@mixin breakpoint($point) {
-    @if $point == small-only {
-        // max-width 640px, mobile-only styles, use when QAing mobile issues */
-        @media only screen and (max-width: $small-breakpoint) { @content; } 
-    }
-    @else if $point == medium-up {
-        // min-width 641px, medium screens */
-        @media only screen and (min-width: $small-breakpoint  + px-to-em(1)) { @content; } 
-    }
-    @else if $point == medium-only-portrait {
-        // min-width 641px and max-width 800px, use when QAing portrait tablet-only issues */
-        @media only screen and (min-width: $small-breakpoint  + px-to-em(1)) and (max-width: $medium-portrait-breakpoint) { @content; } 
-    }
-	@else if $point == medium-only-portrait-up {
-        // min-width 801px,  portrait tablet up */
-        @media only screen and (min-width: $medium-portrait-breakpoint  + px-to-em(1)) { @content; } 
-    }
-    @else if $point == medium-only {
-        // min-width 641px and max-width 1024px, use when QAing tablet-only issues */
-        @media only screen and (min-width: $small-breakpoint  + px-to-em(1)) and (max-width: $medium-breakpoint) { @content; } 
-    }
-    @else if $point == large-up {
-        // min-width 1025px, large screens */
-        @media only screen and (min-width: $medium-breakpoint  + px-to-em(1)) { @content; } 
-    }
-    @else if $point == large-only {
-        // min-width 1025px and max-width 1440px, use when QAing large screen-only issues */
-        @media only screen and (min-width: $medium-breakpoint  + px-to-em(1)) and (max-width: $large-breakpoint) { @content; } 
-    }
-    @else if $point == xlarge-up {
-        // min-width 1441px, xlarge screens */
-        @media only screen and (min-width: $large-breakpoint + px-to-em(1)) { @content; } 
-    }
-    @else if $point == xlarge-only {
-        // min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
-        @media only screen and (min-width: $large-breakpoint + px-to-em(1)) and (max-width: $xlarge-breakpoint) { @content; } 
-    }
-    @else if $point == xxlarge-up {
-        // min-width 1921px, xxlarge screens */
-        @media only screen and (min-width: $xlarge-breakpoint + px-to-em(1)) { @content; } 
-    }
+// function to calculates the em-value from a px-value.
+// $context is optional, defaults to $basefont.
+@function px-to-em($target, $context: $basefont) {
+	@return ($target / $context) * 1em;
 }

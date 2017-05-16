@@ -19,7 +19,7 @@ figure {
     }
 }
 .article figure {
-    @include breakpoint(medium-up) {
+    @media only screen and (min-width: px-to-em(641)) {
         &.left, &.right {
             @include span-columns(2 of 4);
         }
@@ -29,7 +29,7 @@ figure {
             margin-left: $gutter;
         }
     }
-    @include breakpoint(medium-only-portrait-up) {
+    @media only screen and (min-width: px-to-em(801)) {
         &.left, &.right {
             @include span-columns(2 of 5);
         }

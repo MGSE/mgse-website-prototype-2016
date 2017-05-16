@@ -63,29 +63,18 @@
     
     &:hover {
         background: #E0EBF5;
-    }
-    
-    @include breakpoint (small) {
-        width: 100%;
-    }
-    
+    }    
 }
 .sub-site-nav a:first-child {
     width: 40px;
     overflow: hidden;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
-    @include breakpoint (small) {
-        width: 100%;
-    }
     &:before {
         content: "\f015";
         font-family: "FontAwesome";
         margin-right: 100%;
         vertical-align: bottom;
-        @include breakpoint (small) {
-            margin-right: 5px;
-        }
     }
 }
 .sub-site-nav a:last-child {

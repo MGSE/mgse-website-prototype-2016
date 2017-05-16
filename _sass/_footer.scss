@@ -1,5 +1,5 @@
 .footer {
-    @include breakpoint(medium-up) {
+    @media only screen and (min-width: px-to-em(641)) {
         @include outer-container;
         &>div {
             clear: left;
@@ -7,34 +7,34 @@
     }
 
     .title {
-        @include breakpoint(medium-up) {
+        @media only screen and (min-width: px-to-em(641)) {
             clear: none;
             @include span-columns(4 of 8);
         }
-        @include breakpoint(medium-only-portrait-up) {
+        @media only screen and (min-width: px-to-em(801)) {
             @include span-columns(8 of 8);
         }
     }
     .contact {
-        @include breakpoint(medium-up) {
+         @media only screen and (min-width: px-to-em(641)) {
             clear: none;
             @include span-columns(4 of 8);
         }
-        @include breakpoint(medium-only-portrait-up) {
+        @media only screen and (min-width: px-to-em(801)) {
             @include span-columns(6 of 8);
         }
     }
     .publish-dates {
-        @include breakpoint(medium-up) {
+         @media only screen and (min-width: px-to-em(641)) {
             clear: none;
             @include span-columns(4 of 8);
         }
-        @include breakpoint(medium-only-portrait-up) {
+        @media only screen and (min-width: px-to-em(801)) {
             @include span-columns(2 of 8);
         }
     }
     .publish-dates {
-        @include breakpoint(medium-only-portrait-up) {
+        @media only screen and (min-width: px-to-em(801)) {
             @include omega();
         }
     }
@@ -59,7 +59,7 @@
     }
     .button,
     .button:visited {
-        color: $web-blue;
+        color: #005596;
         background: #fff;
     }
     .button:hover {

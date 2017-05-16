@@ -2,7 +2,7 @@
  * Buttons
  */
 .button {
-    background: $web-blue;
+    background: #005596;
     border-bottom: none;
     color: #ffffff;
     cursor: pointer;
@@ -19,7 +19,7 @@
     vertical-align: middle;
     &:hover, &:focus {
         color: #fff;
-        background: $web-10-blue;
+        background: #0072C9;
         box-shadow: none; 
         text-shadow: none;
         border-bottom: none;
@@ -29,7 +29,7 @@
         border: 0;
     }
     &:active {
-        background: $web-20-blue;
+        background: #008ffc;
     }
 }
 

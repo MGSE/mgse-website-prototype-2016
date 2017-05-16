@@ -22,7 +22,7 @@
             font-weight: 700;
             line-height: 1.618;
             margin-bottom: 0.236em;
-            @include breakpoint (medium-up) {
+            @media only screen and (min-width: px-to-em(641)) {
                 font-size: 1.2em;
             }
         }
@@ -31,13 +31,13 @@
             span, a {
                 font-size: 0.732em;
                 display: inline-block;
-                color: $web-10-blue;
+                color: #0072C9;
                 margin-right: 5px;
             }
             a {
                 border-bottom: 0;
                 &:hover {
-                    border-bottom: 1px solid $web-10-blue;
+                    border-bottom: 1px solid #0072C9;
                 }
             }
             .tel {

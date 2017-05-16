@@ -91,7 +91,7 @@
     p {
         font-size: 1.2em;
         margin: 0;
-        color: $web-sky-blue;
+        color: #E3F3FF;
         text-align: center;
         max-width: 100%;
         small {
@@ -128,11 +128,11 @@
             font-size: 1em;
             font-weight: 400;
             margin: 0 0 2em 0;
-            color: $web-grey;
+            color: #4A4A4A;
         }
     }
     &.alt-color {
-        background: $web-sky-blue;
+        background: #E3F3FF;
     }
     .more-link {
         position: absolute;
@@ -154,13 +154,13 @@
     .card,
     .promotion-links {
         width: 100%;
-        @media only screen and (min-width: 375/16*1em) {
+        @media only screen and (min-width: px-to-em(375)) {
             @include span-columns(6 of 12);
             &:nth-child(2) {
                 @include omega;
             }
         }
-        @media only screen and (min-width: 900/16*1em) {
+        @media only screen and (min-width: px-to-em(900)) {
             @include span-columns(3 of 12);
             &:nth-child(2) {
                 margin-right: flex-gutter();
@@ -175,7 +175,7 @@
             margin-right: flex-gutter();
             clear: none;
         }
-        @media only screen and (min-width: 900/16*1em) {
+        @media only screen and (min-width: px-to-em(900)) {
             @include span-columns(6 of 12);
         }
     }
@@ -207,7 +207,7 @@
                 display: none;
             }
         }
-        @media only screen and (min-width: 580/16*1em) {
+        @media only screen and (min-width: px-to-em(580)) {
             font-size: 100%;
             height: 400/16*1em;
             .preview {
@@ -219,7 +219,7 @@
                 }
             }
         }
-        @media only screen and (min-width: 1000/16*1em) {
+        @media only screen and (min-width: px-to-em(1000)) {
             @include omega-reset(2n);
             @include span-columns(3 of 12);
             @include omega(4n);
@@ -253,7 +253,7 @@
  */
 #main-content .home-in-page-nav {
     padding: 0 1em;
-    @include breakpoint(medium-only-portrait-up) {
+    @media only screen and (min-width: px-to-em(801)) {
         @include span-columns(9 of 12);
         float: none;
         margin-left: auto;

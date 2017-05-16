@@ -28,7 +28,7 @@
         border-bottom: 1px solid transparent;
         &:hover {
             h2, h3 {
-                color: $web-10-blue;
+                color: #0072C9;
             }
         }
         > header {
@@ -52,7 +52,7 @@
                 font-size: 12/16*1em;
                 margin: 0;
                 padding: 1em 0 0 0;
-                border-top: 1px solid $text-color;
+                border-top: 1px solid #444444;
             }
         }
     }  
@@ -74,7 +74,7 @@
         max-width: 100%;
     }
     &.highlight {
-        background: $web-sky-blue;
+        background: #E3F3FF;
     }
     transition: transform 0.25s ease-in-out;
     &:hover {
@@ -134,7 +134,7 @@
         right: 0;
     }
     &.testimonial {
-        background-color: $web-sky-blue;
+        background-color: #E3F3FF;
         &:after {
             display: none;
         }
@@ -142,10 +142,10 @@
             margin: 0 1.5em;
         }
         cite {
-            color: $text-color;
+            color: #444444;
             span {
-                border-bottom: 1px solid $web-10-blue;
-                color: $web-blue;
+                border-bottom: 1px solid #0072C9;
+                color: #005596;
             }
         }
     }
@@ -235,7 +235,7 @@
                 border: none;
                 padding: 0.5em 1em;
                 &:hover {
-                    background: $web-sky-blue;
+                    background: #E3F3FF;
                 }
                 span {
                     &:after {
@@ -319,26 +319,6 @@
             }
         }
     }
-    /*&.spotlight {
-        footer:after {
-            content: 'Spotlight';
-            position: absolute;
-            bottom: 3px;
-            left: 0px;
-            color: #fff;
-            //background: $web-blue;
-            padding: $gutter/2 2*$gutter $gutter/2 $gutter/2;
-            font-size: 0.75em;
-            text-transform: uppercase;
-            background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MzMiIGhlaWd
-odD0iMTEzIiB2aWV3Qm94PSIwIDAgNDMzLjUgMTEzLjQiPjxyZWN0IHdpZHRoPSI0MzMuNSIgaG
-VpZ2h0PSIxMTMuNCIgZmlsbD0iI0ZGRiIvPjxwb2x5Z29uIHBvaW50cz0iNDMzLjUgMTEzLjQgM
-CAxMTMuNCAwIDAgNDMzLjUgMCAzNzQuNiA1Ni43ICIgZmlsbD0iIzAxNTY5NyIvPjwvc3ZnPg==");
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: right center;
-        }
-    }*/
 }
 /*
  * project cards

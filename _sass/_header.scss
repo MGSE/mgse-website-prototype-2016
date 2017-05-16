@@ -1,7 +1,7 @@
 /* === MGSE HEADER === */
 
 .wrapper-header {
-    background-color: $mgse-blue;
+    background-color: #00447C;
     min-height: 115px;
     .header {
         position: relative;
@@ -13,7 +13,7 @@
                 width: 450px;
                 max-width:100%;
             }
-            @include breakpoint (small-only) {
+            @media only screen and (max-width: px-to-em(640)) {
                 height: auto;
             }
         }
@@ -45,7 +45,7 @@
     color: #ffffff; 
 
     &:hover {
-      color: lighten($web-blue, 10%);
+      color: #0072c9;
      }
 }
 
@@ -74,7 +74,7 @@
     }
     form button,
     input[type="submit"] {
-        background: $web-blue;
+        background: #005596;
         color:#fff;
         border: 0 none;
         border-radius: 0 3px 3px 0;
@@ -118,7 +118,7 @@
 }
 
 /* hide search and social media icons on mobiles */
-@include breakpoint (small-only) {
+@media only screen and (max-width: px-to-em(640)) {
     .mgse-search, .social-media-icons {
         display:none;
     }

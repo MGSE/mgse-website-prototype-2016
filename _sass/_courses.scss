@@ -159,7 +159,7 @@
         img, p {
             display: block;
         }
-        @media only screen and (min-width: 81.25em) {
+        @media only screen and (min-width: px-to-em(1300)) {
             transform-origin: center;
         }
     }
@@ -192,13 +192,13 @@
  */
 .article .course-ctas {
     display: flex;
-    @include breakpoint(medium-up) {
+    @media only screen and (min-width: px-to-em(641)) {
         display: none;
     }
 }
 .side-bar .course-ctas {
     display: none;
-    @include breakpoint(medium-up) {
+    @media only screen and (min-width: px-to-em(641)) {
         display: block;
         display: flex;
     }

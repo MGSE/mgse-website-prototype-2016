@@ -4,8 +4,8 @@
 .accordion-label {
     color: #005596;
     max-width: 745px;
-    border-bottom-color: $web-blue;
-    border-bottom: 1px solid $web-sky-blue;
+    border-bottom-color: #005596;
+    border-bottom: 1px solid #E3F3FF;
     padding: 0.452em 40px 0.452em 0;
     display: block;
     cursor: pointer;
@@ -33,7 +33,7 @@
     &.compact {
         border-bottom: none;
         a {
-            border-bottom: 1px solid $web-blue;
+            border-bottom: 1px solid #005596;
         }
         &:after {
             position: relative;
