@@ -56,7 +56,7 @@
         }
         
     }
-    @include breakpoint (medium-only-portrait-up) {
+    @media only screen and (min-width: px-to-em(801)) {
         &:before {
             content: "";
         }
