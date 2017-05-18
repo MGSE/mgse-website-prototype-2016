@@ -32,7 +32,9 @@
     margin-right: 1em;
 }
 
-.social-media-icons a, .social-media-icons a:active {
+.social-media-icons a, 
+.social-media-icons a:active,
+.social-media-icons a:visited {
     border-bottom: none;
     color: #ffffff; 
 }
