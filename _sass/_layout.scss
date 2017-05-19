@@ -186,6 +186,7 @@ $grid-columns: 8;
  * Layout for events page
  */
 .nine-three {
+    @include clearfix;
     @media only screen and (min-width: px-to-em(641)) {
         .span3 {
             @include span-columns(3 of 9);
